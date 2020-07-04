@@ -1,0 +1,77 @@
+<view class="wrap">
+	<!-- <view class="top">
+		<view class="address">
+			<view class="address-left">
+				<view class="address-img">
+					<image src="https://img.xmsmoo.com/upload/simu/20191028101351767013.png"></image>
+				</view>
+				<view class="address-msg text1">福建省厦门市湖里区</view>
+			</view>
+			<view class="address-right">
+				<view class="address-btn">分享</view>
+					<view class="address-btn">编辑</view>
+			</view>
+		</view>
+	</view> -->
+	<view class="contents">
+		<view class="cart-list">
+			<view class="goods-item" wx:for="{{cartlist}}">
+				<view class="goods-select" bindtap="OnCartChoose" data-cart-choose="{{item.cartChoose}}" data-index="{{index}}">
+					<image wx:if="{{item.cartChoose}}" src="https://img.xmsmoo.com/upload/4/20191024095159290771.png"></image>
+					<image wx:else src="https://img.xmsmoo.com/upload/4/20191024095212538146.png"></image>
+				</view>
+				<view class="goods-item-right">
+					<view class="goods-img"  bindtap="onGoods" data-goods-id="{{item.goodsId}}">
+						<image src="{{imgurl}}{{item.goodsPic}}"></image>
+					</view>
+					<view class="goods-msg">
+						<view class="goods-msg-top">
+							<view class="goods-name text2">{{item.goodsName}}</view>
+							<!--  -->
+							<view class="goods-specs-box">
+								<view class="goods-specs">
+									<view class="godos-specs-left">
+										<view class="goods-specs-left-left">{{item.goodsSkuInfo}}</view>
+										<!-- <view class="goods-specs-left-right">深蓝色;</view> -->
+									</view>
+									<!-- <view class="goods-specs-right">∨</view> -->
+								</view>
+							</view>
+							<!--  -->
+						</view>
+						<view class="goods-price">¥ {{item.goodsPrice}}</view>
+					</view>
+				</view>
+				<view class="goods-btns">
+					<view class="minus" bindtap="OnMinus" data-index="{{index}}" data-cart-id="{{item.cartId}}">-</view>
+					<view class="goods-num">{{item.goodsNum}}</view>
+					<view class="add" bindtap="OnAdd" data-index="{{index}}"  data-cart-id="{{item.cartId}}">+</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="footer">
+		<view class="footer-left">
+			<view class="select" bindtap="OnAllselect">
+				<view class="select-img goods-select">
+					<image wx:if="{{allselect}}" src="https://img.xmsmoo.com/upload/4/20191024095159290771.png"></image>
+					<image wx:else src="https://img.xmsmoo.com/upload/4/20191024095212538146.png"></image>
+				</view>
+				<view class="select-title">全选</view>
+			</view>
+		</view>
+		<view class="footer-right">
+			<view class="goods-total">
+				<view class="goods-nums">共{{goodsNums}}件,</view>
+				<view class="goods-total-title">合计</view>
+				<view class="goods-prices">
+         <p>¥</p>
+        <p>{{goodsPrices}}</p>
+    </view>
+			</view>
+			<view class="cart-btn" bindtap="OnSettle">去结算</view>
+		</view>
+		
+	</view>
+	<tabbar></tabbar>
+</view>

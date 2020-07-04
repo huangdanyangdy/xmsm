@@ -1,0 +1,85 @@
+<view class="wrap">
+	<view class="contents">
+		<view class="top" wx:if="{{true}}">
+			<view class="top-top">
+				<view class="top-top-img">
+					<image src="https://img.xmsmoo.com/upload/simu/20191101134603058722.png"></image>
+				</view>
+				<view class="top-top-title">拼团成功！</view>
+			</view>
+			<view class="top-bottom">
+				<view class="top-bottom-top">
+					<view class="top-bottom-top-top">
+						<p>恭喜您，</p>
+						<p>2人</p>
+						<p>团已成！</p>
+					</view>
+					<view class="top-bottom-top-bottom">等待商家为您发货吧！</view>
+				</view>
+				<view class="top-bottom-bottom">
+					<view class="men-imgs">
+					<view class="men-img men-main">
+						<image src="../images/goods.png"></image>
+					</view>
+					<view class="men-img men-last"></view>
+				</view>
+				<view class="team-state-img">
+					<image src="https://img.xmsmoo.com/upload/simu/20191101140725400147.png"></image>
+				</view>
+				</view>
+			</view>
+		</view>
+		<!--  -->
+		<view class="top" wx:else>
+			<view class="top-top">
+				<view class="top-top-img">
+					<image src="https://img.xmsmoo.com/upload/simu/20191101141119997397.png"></image>
+				</view>
+				<view class="top-top-title">拼团失败！</view>
+			</view>
+			<view class="top-bottom">
+				<view class="top-bottom-top">
+					<view class="top-bottom-top-top">
+						<p>抱歉，</p>
+						<p>2人</p>
+						<p>团失败！</p>
+					</view>
+					<view class="top-bottom-top-bottom">重新开团,或看看其他拼团！</view>
+				</view>
+				<view class="top-bottom-bottom">
+					<view class="men-imgs">
+					<view class="men-img men-main">
+						<image src="../images/goods.png"></image>
+					</view>
+					<view class="men-img men-last"></view>
+				</view>
+				<view class="team-state-img">
+					<image src="https://img.xmsmoo.com/upload/simu/20191101141519542241.png"></image>
+				</view>
+				</view>
+			</view>
+		</view>
+		<view class="spell-planing">
+			<view class="planing-title">
+				<p>拼单规则</p>
+			</view>
+			<view class="planing-msg">
+				<text>好友拼单 •  人满发货 • 人不满退货</text>
+			</view>
+		</view>
+		<!--  -->
+		<view class="team-btns">
+			<view class="team-btn-box">
+				<view class="team-btn">分享一下</view>
+				<view class="team-btn" wx:if="{{false}}">再来一单</view>
+				<view class="team-btn" wx:else>重新开团</view>
+				<view class="team-btn">查看详情</view>
+			</view>
+		</view>
+		<view class="team-active" wx:if="{{true}}">
+			<view class="team-active-img">
+				<image src="https://img.xmsmoo.com/upload/simu/20191101161912487480.png"></image>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,46 @@
+<view class="wrap">
+  <view class="top">
+    <view class="top-search" bindtap="toSearch">
+      <view class="search-img">
+          <image class="" src="https://img.xmsmoo.com/upload/simuIcon/20191021161047344580.png"></image>
+      </view>
+      <input type="text" disabled="true" placeholder="搜索关键字"/>
+    </view>
+  </view>
+  <view class="contents">
+     <view class="contents-left" scroll-y="{{true}}">
+      <view class="class-list" wx:for="{{goodsClass}}">
+          <view class="class-item {{navClassNum==index?'class-item-active':''}}" bindtap="onClass" data-index="{{index}}">
+            <view class="class-name {{navClassNum==index?'class-name-active':'' }}">{{item.goodsClassName}}</view>
+          </view>
+      </view>
+     </view>
+      <view class="contents-right"wx:for="{{goodsClass}}" wx:if="{{navClassNum==classIndex}}" wx:for-index="classIndex" wx:for-item="goodsIndex">
+        <view class="class-msg" >
+          <view class="class-adv">
+              <image class="" src="{{imgurl}}{{goodsIndex.goodsClassBanner}}"></image>
+          </view>
+        </view>
+        <view class="class-content" wx:for="{{goodsIndex.goodsClassTwoVOList}}" wx:for-item="goodsClassTwoVOList">
+          <view class="class-title">
+            <text>{{goodsClassTwoVOList.goodsClassName}}</text>
+          </view>
+          <view class="class-lists" >
+            <navigator class="class-items"
+                       hover-class="none"
+                       url="/pages/goods-list/goods-list?goodsClassId={{goodsClassThreeVOList.goodsClassId}}"
+                       wx:for="{{goodsClassTwoVOList.goodsClassThreeVOList}}"
+                       wx:for-item="goodsClassThreeVOList"
+                       wx:for-index="goodsListNum"
+                       wx:if="{{navClassNum==classIndex}}">
+              <view class="class-img">
+                <image class="" src="{{imgurl}}{{goodsClassThreeVOList.goodsClassPic}}"></image>
+              </view>
+              <view class="class-names text">{{goodsClassThreeVOList.goodsClassName}}</view>
+            </navigator>
+          </view>
+        </view>
+     </view>
+  </view>
+  <tabbar></tabbar>
+</view>

@@ -1,0 +1,114 @@
+<!--顶部橙色背景=========-->
+<view class="mine-top"></view>
+<!--顶部会员信息=========-->
+<view class="member-msg">
+    <view class="nav-top">
+        <view class="nav-topLeft">
+            <view class="nav-memberImg"><image src="{{member.memberHeadimgurl}}"></image></view>
+            <view class="nav-infoBox">
+                <view class="nav-memName">
+                    <view class="nav-vipName text1">{{member.memberNickname}}</view>
+                    <view class="nav-VipImg" wx:if="{{member.memberState}}">VIP</view>
+                </view>
+                <view class="nav-vipGrade">{{member.memberLevelName}}</view>
+            </view>
+        </view>
+        <view class="nav-topRight" bindtap="toRegister">
+            <view class="top-rightImg"><image src="https://img.xmsmoo.com/upload/simuIcon/20191030093450972796.png"></image></view>
+            <view class="member-central">签到</view>
+        </view>
+    </view>
+    <view class="nav-mid-box" bindtap="toPoints">
+        <view class="nav-mid">距离下一等级还差4400积分</view>
+        <view class="my-prog">
+            <progress color="#FF4439" percent="30" border-radius="25" stroke-width="10rpx"></progress>
+            <view class="prograss-img"><image src="https://img.xmsmoo.com/upload/simuIcon/20191030093117625091.png"></image></view>
+        </view>
+        <view class="nav-bottom">
+            <view class="nav-bottom-item">
+                <view class="nav-itemGrade">{{member.memberLevelName}}</view>
+                <view class="nav-itemMark">600</view>
+            </view>
+            <view class="nav-bottom-item">
+                <view class="nav-itemGrade">白金会员</view>
+                <view  class="nav-itemMark">1000</view>
+            </view>
+        </view>
+    </view>
+
+</view>
+
+
+<!--    模块-------------->
+<view  class="module-wrap">
+    <!--会员权益=========-->
+    <view class="member-mid">
+        <view class="mid-tit">会员权益</view>
+        <view class="rights-list" >
+            <view class="rights-item">
+                <view class="rights-img"><image src="https://img.xmsmoo.com/upload/simuIcon/20191030093815265410.png"></image></view>
+                <view class="rights-tit">积分加价购</view>
+            </view>
+            <view class="rights-item">
+                <view class="rights-img"><image src="https://img.xmsmoo.com/upload/simuIcon/20191030093841104347.png"></image></view>
+                <view class="rights-tit">新手特权</view>
+            </view>
+            <view class="rights-item">
+                <view class="rights-img"><image src="https://img.xmsmoo.com/upload/simuIcon/20191030093855124748.png"></image></view>
+                <view class="rights-tit">会员礼包</view>
+            </view>
+            <view class="rights-item">
+                <view class="rights-img"><image src="https://img.xmsmoo.com/upload/simuIcon/20191030093911570940.png"></image></view>
+                <view class="rights-tit">生日特权</view>
+            </view>
+            <view class="rights-item">
+                <view class="rights-img"><image src="https://img.xmsmoo.com/upload/simuIcon/20191030093930217131.png"></image></view>
+                <view class="rights-tit">专享礼包</view>
+            </view>
+            <view class="rights-item">
+                <view class="rights-img"><image src="https://img.xmsmoo.com/upload/simuIcon/20191030093943904021.png"></image></view>
+                <view class="rights-tit">物美特惠</view>
+            </view>
+            <view class="rights-item">
+                <view class="rights-img"><image src="https://img.xmsmoo.com/upload/simuIcon/20191030093957617816.png"></image></view>
+                <view class="rights-tit">周年礼包</view>
+            </view>
+            <view class="rights-item">
+                <view class="rights-img"><image src="https://img.xmsmoo.com/upload/simuIcon/20191030094018195332.png"></image></view>
+                <view class="rights-tit">活动尊享</view>
+            </view>
+        </view>
+    </view>
+<!--    会员优选========-->
+    <view class="member-mid">
+        <view class="well-choose">
+            <view class="well-tit">会员优选</view>
+            <view class="view-more">
+                <view class="more-txt">查看更多</view>
+                <view class="more-icon"> > </view>
+            </view>
+        </view>
+        <view class="choose-container">
+            <view class="choose-item" ><image src="https://img.xmsmoo.com/upload/simuIcon/20191030094044044058.png"></image></view>
+            <view class="choose-item" ><image src="https://img.xmsmoo.com/upload/simuIcon/20191030094131826193.png"></image></view>
+            <view class="choose-item" ><image src="https://img.xmsmoo.com/upload/simuIcon/20191030094147925997.png"></image></view>
+        </view>
+    </view>
+</view>
+<!--  -->
+<view class="sign-box" wx:if="{{false}}">
+  <view class="screen"></view>
+  <view class="sign">
+    <view class="sign-top">
+      <view class="sign-top-top">
+        <view class="sign-top-top-left">+10</view>
+         <view class="sign-top-top-right">积分</view>
+      </view>
+        <view class="sign-top-bottom">还差50积分就可获得1枚勋章哦</view>
+    </view>
+    <view class="sign-btn">确定</view>
+    <view class="sign-del-img">
+        <image src="https://img.xmsmoo.com/upload/4/20191030160910105706.png"></image>
+    </view>
+  </view>
+</view>

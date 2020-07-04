@@ -1,0 +1,153 @@
+<view class="wrap">
+	<view class="top">
+		<!--  -->
+		<view class="refund-item" wx:if="{{refundState==10}}">
+			<view class="refund-item-top">
+				<view class="refund-item-title text1">退款申请待商家处理</view>
+				<view class="refund-item-msg">
+					<p>你已成功发起退款申请，商家将在</p>
+					<p>6天23小时56分钟</p>
+					<p>内处理</p>
+				</view>
+			</view>
+			<view class="msg-list" wx:if="{{topSate}}">
+				<view class="msg-item">如果商家同意，申请将达成并退款给你</view>
+				<view class="msg-item">如果商家拒绝，你可以修改退款申请货申请客服介入</view>
+				<view class="msg-item">如果商家逾期未处理，退款申请将自动达成并退款给你</view>
+			</view>
+			<view class="refund-item-bottom" bindtap="Ontop">
+				<view class="refund-item-bottom-title">{{topSate?'收起':'展开'}}</view>
+				<view class="refund-item-bottom-down">{{topSate?'∧':'∨'}}</view>
+			</view>
+		</view>
+		<!--  -->
+		<!--  -->
+		<view class="refund-item" wx:if="{{refundState==20}}">
+			<view class="refund-item-top">
+				<view class="refund-item-title text1">请退货并填写物流信息</view>
+				<view class="refund-item-msg">
+					<p>商家已同意退款申请，请在</p>
+					<p>6天23小时56分钟</p>
+					<p>内响应</p>
+				</view>
+			</view>
+			<view class="msg-list" wx:if="{{topSate}}">
+				<view class="msg-item">未与商家协商一致，请务使用到付货平邮，以免商家拒签货物</view>
+				<view class="msg-item">请填写真实物流信息，逾期未填写，本次申请将自动撤销</view>
+			</view>
+			<view class="refund-item-bottom" bindtap="Ontop">
+				<view class="refund-item-bottom-title">{{topSate?'收起':'展开'}}</view>
+				<view class="refund-item-bottom-down">{{topSate?'∧':'∨'}}</view>
+			</view>
+		</view>
+		<!--  -->
+		<!--  -->
+		<view class="refund-item" wx:if="{{refundState==30}}">
+			<view class="refund-item-top">
+				<view class="refund-item-title text1">商家不同意退款申请</view>
+				<view class="refund-item-msg">
+					<p>你需在</p>
+					<p>6天23小时56分钟</p>
+					<p>内响应，否则本次申请将自动撤销</p>
+				</view>
+			</view>
+			<view class="msg-list" wx:if="{{topSate}}">
+				<view class="msg-item">你可以修改申请后再次发起，商家会重新处理</view>
+				<view class="msg-item">如果你无法与商家协商一致，可以申请客服介入</view>
+			</view>
+			<view class="refund-item-bottom" bindtap="Ontop">
+				<view class="refund-item-bottom-title">{{topSate?'收起':'展开'}}</view>
+				<view class="refund-item-bottom-down">{{topSate?'∧':'∨'}}</view>
+			</view>
+		</view>
+		
+	</view>
+	<view class="contents">
+		<!--  -->
+		<view class="address" wx:if="{{refundState==20}}">
+			<view class="address-left">退货地址：</view>
+			<view class="address-right">
+				<view class="address-right-top">
+					<view class="address-name">霜旱进</view>
+					<view class="address-phone">13434345535</view>
+				</view>
+				<view class="address-right-bottom">福建省厦门市湖里区厦门市湖里区金山街道金山财富广场</view>
+			</view>
+		</view>
+		<!--  -->
+		<view class="refused" wx:if="{{refundState==30}}">
+			<view class="refused-left">拒绝理由：</view>
+			<view class="refused-right text1">111</view>
+		</view>
+		<!--  -->
+		<view class="recording" bindtap="OnRecording">
+			<view class="recording-left">查看协商记录</view>
+			<view class="recording-right">></view>
+		</view>
+		<!--  -->
+		<view class="refund">
+			<view class="refund-top">商品详情</view>
+			<view class="goods-list">
+			<view class="goods-item">
+				<view class="goods-img">
+					<image src="https://img.xmsmoo.com/upload/4/20191023151059503959.png"></image>
+				</view>
+				<view class="goods-item-right">
+					<view class="goods-item-right-top">
+						<view class="goods-name text2">时日朝歌时蜂鸣器时蜂鸣器歌时蜂鸣时蜂鸣器歌时蜂鸣时蜂鸣器歌时蜂鸣歌时蜂鸣歌时蜂鸣歌时蜂鸣歌时蜂鸣吕</view>
+						<view class="goods-specs">
+							<view class="goods-specs-class">颜色分类:</view>
+							<view class="goods-specs-name">深蓝色;</view>
+						</view>
+					</view>
+					<view class="goods-item-right-bottom">
+						<view class="goods-price">¥33</view>
+						<view class="goods-num">×1</view>
+					</view>
+				</view>
+			</view>
+		</view>
+			<view class="refund-bottom">
+				<view class="refund-bottom-item">
+					<view class="refund-bottom-item-left">退款方式：</view>
+					<view class="refund-bottom-item-right">仅退款</view>
+				</view>
+				<view class="refund-bottom-item">
+					<view class="refund-bottom-item-left">退款原因：</view>
+					<view class="refund-bottom-item-right"> 未按照约定时间发货</view>
+				</view>
+				<view class="refund-bottom-item">
+					<view class="refund-bottom-item-left">退款金额：</view>
+					<view class="refund-bottom-item-right">
+						<p>￥49.80</p>
+						<p>(含运费￥0.00)</p>
+					</view>
+				</view>
+				<view class="refund-bottom-item">
+					<view class="refund-bottom-item-left">退款编号： </view>
+					<view class="refund-bottom-item-right">20190231589642569114</view>
+				</view>
+				<view class="refund-bottom-item">
+					<view class="refund-bottom-item-left">申请时间：</view>
+					<view class="refund-bottom-item-right">2019-10-24 14:25:23</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="footer">
+		<view class="refund-btns" wx:if="{{refundState==10}}">
+			<view class="refund-btn">联系卖家</view>
+			<view class="refund-btn">撤销申请</view>
+		</view>
+		<view class="refund-btns" wx:if="{{refundState==20}}">
+			<view class="refund-btn">联系卖家</view>
+			<view class="refund-btn">撤销申请</view>
+			<view class="refund-btn" bindtap="OnLogistics">填写退货物流</view>
+		</view>
+		<view class="refund-btns" wx:if="{{refundState==30}}">
+			<view class="refund-btn" bindtap="OnCustomer">申请客服介入</view>
+			<view class="refund-btn">撤销申请</view>
+			<view class="refund-btn">修改申请</view>
+		</view>
+	</view>
+</view>

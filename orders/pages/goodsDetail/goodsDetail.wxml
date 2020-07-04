@@ -1,0 +1,293 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="wrap-all">
+    <swiper class="goodsDet-image" autoplay="true">
+        <swiper-item wx:for="{{content.goodsMorePicList}}" wx:for-item="PicList">
+            <image src="{{imgurl}}{{PicList}}"></image>
+        </swiper-item>
+    </swiper>
+    <view class="goodsDet-rel-wrap">
+        <!--        /*商品信息===================*/-->
+        <view class="goodsDet-rel" >
+            <view class="goodsDet-rel-left">
+                <view class="goodsDet-price-box">
+                    <view class="goodsDet-price-icon">￥</view>
+                    <view class="goodsDet-price-int">{{priceOne}}.</view>
+                    <view class="goodsDet-price-float">{{priceTwo}}</view>
+                </view>
+                <view class="goodsDet-price-origin">￥{{content.goodsOriginalPrice}}</view>
+            </view>
+            <view class="goodsDet-rel-right">
+                <button open-type="share">
+                 <view class="goodsDet-rel-share">
+                    <image src="https://img.xmsmoo.com/upload/simuIcon/20191023120140785363.png"></image>
+                    <view class="goodsDet-share-text">分享</view>
+                </view>
+                </button>
+               
+                <view class="goodsDet-rel-share" bindtap="addAttention">
+                    <view wx:if="{{!starStatus}}"><image src="https://img.xmsmoo.com/upload/simuIcon/20191023120204250871.png"></image></view>
+                    <view wx:else><image src="https://img.xmsmoo.com/upload/simuIcon/20191107115555028436.png"></image></view>
+                    <view class="goodsDet-share-text" wx:if="{{!starStatus}}">关注</view>
+                    <view class="goodsDet-share-text" wx:else>已关注</view>
+                </view>
+            </view>
+        </view>
+<!--        商品名称=========================-->
+        <view class="goodsDetail-name text2">{{content.goodsName}}</view>
+        <view class="goodsDetail-name-sub text1">{{content.goodsPromotions}}</view>
+        <view class="goodsDetail-store">
+            <view >{{content.goodsSaleNum}}人购买</view>
+            <view >库存剩{{content.goodsStorage}}件</view>
+        </view>
+    </view>
+<!--    优惠券====================================-->
+    <view class="goods-coupon-wrap" bindtap="getCouSuccess">
+        <view class="goods-coupon-wrap-wrap">
+            <view class="goods-coupon-left">优惠</view>
+            <view class="goods-coupon-box">
+                <view class="coupon-out-box">
+                    <view class="goods-coupon-one">满300元减50元</view>
+                    <view class="goods-coupon-one">满300元减50元</view>
+                </view>
+                <view class="coupon-out-box">
+                    <view class="goods-coupon-two">满300元减50元</view>
+                    <view class=" goods-coupon-det text1">满300元减50元</view>
+                </view>
+                <view class="coupon-out-box">
+                    <view class="goods-coupon-two">赠品</view>
+                    <view class=" goods-coupon-det text1">购买食品部分品类满1元即返茶叶购买食品部分品类满1元即返茶叶购买食品部分品类满1元即返茶叶</view>
+                </view>
+
+            </view>
+        </view>
+
+        <view class="goods-coupon-icon"> > </view>
+    </view>
+<!--    商品规格详情================================-->
+    <view class="goods-spec-out">
+        <view class="goods-spec-box" bindtap="showSpec">
+            <view class="goods-spec-box-box">
+                <view class="goods-spec">规格</view>
+                <view class="goods-spec-content text1">田园四件套花</view>
+            </view>
+            <view class="goods-right-icon"> > </view>
+        </view>
+<!--        <view class="goods-spec-box" bindtap="showParams">-->
+<!--            <view class="goods-spec-box-box">-->
+<!--                <view class="goods-spec">参数</view>-->
+<!--                <view class="goods-spec-content text1">品牌 质地...</view>-->
+<!--            </view>-->
+<!--            <view class="goods-right-icon"> > </view>-->
+<!--        </view>-->
+    </view>
+<!--    评价=================================-->
+    <view class="comment-cont">
+        <view  class="comment-header" bindtap="toEvalDet">
+            <view class="comment-header-com">
+                <view class="comment-left-icon"></view>
+                <view class="comment-left-tit">评价</view>
+                <view class="comment-left-num">({{num}})</view>
+            </view>
+            <view class="comment-header-com" >
+                <view class="comment-good">好评率</view>
+                <view class="comment-percent">{{goodPercent}}%</view>
+                <view class="comment-right-icon"> > </view>
+            </view>
+        </view>
+        <view class="comment-num-wrap" >
+            <view class="comment-num-items"   wx:for="{{evaAll}}" wx:for-item="evaAll">{{evaAll.goodsEvaTagValue}}({{evaAll.statisticsNum}})</view>
+        </view>
+        <!-- <view class="comment-more">∨</view> -->
+        <view class="comment-member-com-item" wx:for="{{evaList}}" wx:for-item="evaList"   bindtap="toEvalDet">
+            <view class="comment-member-com">
+                <view class="comment-member-left">
+                    <!-- 头像-->
+                    <view class="comment-member-header"><image src="{{evaList.memberHeadimgurl}}"></image></view>
+                    <view class="comment-member-info">
+                        <view class="comment-member-name">{{evaList.memberNickname}}</view>
+                        <view  class="comment-level-box" >
+                            <view class="comment-member-level" wx:for="{{evaList.goodsEvaluateScores}}">
+                                <!-- 星星等级-->
+                                <image src="https://img.xmsmoo.com/upload/simuIcon/20191024105047932709.png"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <!-- 右边日期-->
+                <view class="comment-member-right">{{evaList.goodsEvaluateAddTime}}</view>
+            </view>
+            <view class="comment-member-content text2">{{evaList.goodsEvaluateContent}}</view>
+            <view class="comment-goodsImg-box">
+                <view class="comment-goods-img" wx:for="{{evaList.goodsEvaluatePic}}" wx:for-item="imgList"><image src="{{imgurl}}{{imgList}}"></image></view>
+            </view>
+        </view>
+        <view class="comment-all" bindtap="toEvalDet">查看全部评价</view>
+    </view>
+<!--    店铺推荐===========================-->
+    <view class="recom-wrap">
+        <view class="recom-header" bindtap="togoodsList" >
+            <view class="recom-header-left">店铺推荐</view>
+            <view class="recom-header-right">
+                <view class="recom-header-more">查看更多</view>
+                <view class="recom-header-icon"> > </view>
+            </view>
+        </view>
+        <!--    推荐商品--->
+        <view class="recom-goods-list" >
+            <view class="recom-goods-item"  wx:for="{{goodsRecommend}}" wx:for-item="item"
+            data-goods-id="{{item.goods.goodsId}}" bindtap="togoodsDetail">
+                <view class="recom-goodsImg"><image src="{{imgurl}}{{item.goods.goodsPic}}"></image></view>
+                <view class="recom-goodsName text2">
+                   {{item.goods.goodsName}}
+                </view>
+                <view class="recom-goodsPrice">￥{{item.goods.goodsPrice}}</view>
+            </view>
+        </view>
+    </view>
+<!--    图文详情==========================-->
+    <view class="goodsDetail-footer">
+        <view class="pic-Det">
+            <view class="pic-line"></view>
+            <view class="pic-tit">图文详情</view>
+            <view class="pic-line"></view>
+        </view>
+        <view class="text-box">
+           <template is="wxParse" data="{{wxParseData:detail.nodes}}" />
+        </view>
+        
+    </view>
+</view>
+
+
+<!--    加入购物车=========================-->
+<view   class="goodsDet-footer">
+    <view class="goods-collect" bindtap="toIndex">
+        <view class="collectImg" ><image src="https://img.xmsmoo.com/upload/simuIcon/20191112114135114001.png"></image></view>
+        <view class=" collectTxt " >首页</view>
+    </view>
+    <button open-type="contact" class="goods-collect">
+        <view class="collectImg"><image src="https://img.xmsmoo.com/upload/simuIcon/20191024151826323227.png"></image></view>
+        <view class="collectTxt">客服</view>
+    </button>
+    <navigator hover-class="none" url="/pages/cart/cart" class="goods-collect">
+        <view class="collectImg"><image src="https://img.xmsmoo.com/upload/simuIcon/20191024151848145377.png"></image></view>
+        <view class="collectTxt">购物车</view>
+    </navigator>
+    <view class="goodsSelec">
+        <view class="goodsAdd" bindtap="showSpec">加入购物车</view>
+        <view class="goodsBuy" bindtap="showSpec">立即购买</view>
+    </view>
+</view>
+<!--    优惠券弹窗-->
+<view class="couponToast-cont" wx:if="{{couponMaskStatus}}">
+    <view class="coupon-mask" bindtap="getCouSuccess"></view>
+    <view class="coupon-toast">
+        <view class="couponToast-header">
+            <view class="couponToast-tit">优惠</view>
+        </view>
+        <view class="couponToast-middle">
+            <view class="saleMethods">促销</view>
+            <!-- 优惠活动--------->
+            <view class="saleMethods-box" wx:for="{{2}}">
+                <view class="saleMethods-one">赠品</view>
+                <view class="saleMethods-det text1">购买食品部分品类满1元即返茶叶300立减...购买食品部分品类满1元即返茶叶300立减</view>
+            </view>
+
+
+            <view class="saleMethods">领券</view>
+            <!--     购物券   -->
+            <view class="{{item.choose?'couponUse ':'couponUsed'}} "  wx:for="{{coupon}}">
+                <view class="couponUse-left">
+                    <view class="couponUse-leftTop">
+                        <view class="couponUse-icon">￥</view>
+                        <view  class="couponUse-worth">{{item.couponPrice}}</view>
+                        <view  class="couponUse-txt">店铺优惠券</view>
+                    </view>
+                    <view class="couponUse-for">新用户可用</view>
+                    <view class="couponUse-for">有效期{{item.couponEndTime}}</view>
+                </view>
+                <view class="couponUse-right" bindtap="getCoupon" wx:if="{{item.choose}}"  data-index="{{index}}" data-coupon-id="{{item.couponId}}">立即领取</view>
+                <view class="couponUse-right" wx:else>已领取</view>
+            </view>
+        </view>
+        <!--        完成-->
+        <view class="couponToast-footer">
+            <view class="successBtn" bindtap="getCouSuccess">完成</view>
+        </view>
+    </view>
+</view>
+<!--规格详情弹窗-->
+<view wx:if="{{sepcMaskStatus}}">
+    <view class="coupon-mask"></view>
+    <view class="coupon-toast">
+        <!--  商品信息    -->
+        <view class="specToast-header">
+            <view class="specToast-left">
+                <view class="specToast-leftImag"><image src="https://img.xmsmoo.com/upload/simu/20191025092647769992.png"></image></view>
+                <view class="specToast-leftInfo">
+                    <view class="specToast-price">
+                        <view class="specToast-priceIcon">￥</view>
+                        <view class="specToast-price-price">{{goodsSku.goodsSkuPrice}}</view>
+                    </view>
+                    <view class="specToast-storeLeft">库存剩{{goodsSku.goodsSkuStorage}}件</view>
+                    <view class="specToast-leftTxt">{{goodsSku.goodsSkuName}}</view>
+                </view>
+            </view>
+            <view class="specToast-right" bindtap="showSpec"><image src="https://img.xmsmoo.com/upload/simuIcon/20191025093953561921.png"></image></view>
+        </view>
+        <!--可选择的规格-->
+        <view class="spec-content">
+            <view class="spec-box"   wx:for="{{skuList}}" wx:for-index="aindex">
+                <view class="spec-txt"> {{item.goodsSpecName}}</view>
+                <view class="spec-list">
+                    <view class="{{specValues.specStock?'spec-item-false':'spec-item'}} {{specValues.SpecValueChoose?'spec-item-active':''}}"
+                          bindtap="changeSpec"
+                          wx:for="{{item.specValues}}"
+                        wx:for-index="bindex"
+                          wx:for-item="specValues"
+                          data-spec-id="{{item.goodsSpecId}}"
+                          data-spec-value-id="{{specValues.goodsSpecValueId}}"
+                          data-bindex="{{bindex}}"
+                          data-aindex="{{aindex}}"
+                          >
+                        <image src="{{imgurl}}{{specValues.goodsSpecValuePic}}"></image>
+                        <view class="spec-spec">{{specValues.goodsSpecValueName}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view class="spec-numBox">
+            <view class="spec-numTit">购买数量</view>
+            <view class="spec-numBtn">
+                <view class="spec-numSub" bindtap="amouSub">-</view>
+                <view class=" spec-numSub spec-amou">{{specNum}}</view>
+                <view class="spec-numSub" bindtap="amouAdd">+</view>
+            </view>
+        </view>
+        <view class="spec-submit-box">
+            <view class="spec-submit">
+                <view class="spec-addCart" bindtap="OnAddCart">加入购物车</view>
+                <view class="spec-buyNow" bindtap="toBuyNow">立即购买</view>
+            </view>
+        </view>
+    </view>
+</view>
+<!--产品参数弹窗-->
+<view wx:if="{{paramStatus}}">
+    <view class="coupon-mask"></view>
+    <view class="coupon-toast">
+        <view class="paramTit">产品参数</view>
+        <view class="params-list">
+            <view class="params-item">
+                <view class="param-left ">品牌瓷蝶llattttt一月又一月</view>
+                <view class="param-right">瓷蝶突突突突突突拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖</view>
+            </view>
+        </view>
+        <view class="params-footerBox" bindtap="showParams">
+            <view class="params-submit">
+                <view>完成</view>
+            </view>
+        </view>
+    </view>
+</view>

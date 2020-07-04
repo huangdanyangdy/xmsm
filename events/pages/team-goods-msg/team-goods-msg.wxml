@@ -1,0 +1,371 @@
+<view class="wrap">
+	<view class="contents">
+		<view class="wrap-all">
+			<swiper class="goodsDet-image" autoplay="true">
+				<swiper-item wx:for="{{3}}">
+					<image src="https://img.xmsmoo.com/upload/simu/20191023120227798846.png"></image>
+				</swiper-item>
+			</swiper>
+			<view class="goodsDet-rel-wrap">
+				<!--        /*商品信息===================*/-->
+				<view class="goodsDet-rel">
+					<view class="goodsDet-rel-left">
+						<view class="goodsDet-price-box">
+							<view class="goodsDet-price-icon">￥</view>
+							<view class="goodsDet-price-int">49.</view>
+							<view class="goodsDet-price-float">80</view>
+						</view>
+						<view class="goodsDet-price-origin">￥96.00</view>
+					</view>
+					<view class="goodsDet-rel-right">
+						<view class="goodsDet-rel-share">
+							<image src="https://img.xmsmoo.com/upload/simuIcon/20191023120140785363.png"></image>
+							<view class="goodsDet-share-text">分享</view>
+						</view>
+						<view class="goodsDet-rel-share">
+							<image src="https://img.xmsmoo.com/upload/simuIcon/20191023120204250871.png"></image>
+							<view class="goodsDet-share-text">关注</view>
+						</view>
+					</view>
+				</view>
+				<!--        商品名称=========================-->
+				<view class="goodsDetail-name text2">北欧简约干花瓶摆件客厅插花电视柜玄关装饰品摆 设手工陶瓷小花瓶</view>
+				<view class="goodsDetail-name-sub text1">双十一开门红，抢优惠券满200减10。</view>
+				<view class="goodsDetail-store">
+					<view>123.4万人购买</view>
+					<view>库存剩10264件</view>
+				</view>
+			</view>
+			<!--    优惠券====================================-->
+			<view class="goods-coupon-wrap" bindtap="getCouSuccess">
+				<view class="goods-coupon-wrap-wrap">
+					<view class="goods-coupon-left">优惠</view>
+					<view class="goods-coupon-box">
+						<view class="coupon-out-box">
+							<view class="goods-coupon-one">满300元减50元</view>
+							<view class="goods-coupon-one">满300元减50元</view>
+						</view>
+						<view class="coupon-out-box">
+							<view class="goods-coupon-two">满300元减50元</view>
+							<view class=" goods-coupon-det text1">满300元减50元</view>
+						</view>
+						<view class="coupon-out-box">
+							<view class="goods-coupon-two">赠品</view>
+							<view class=" goods-coupon-det text1">购买食品部分品类满1元即返茶叶购买食品部分品类满1元即返茶叶购买食品部分品类满1元即返茶叶</view>
+						</view>
+
+					</view>
+				</view>
+
+				<view class="goods-coupon-icon"> > </view>
+			</view>
+			<!--    商品规格详情================================-->
+			<view class="goods-spec-out">
+				<view class="goods-spec-box" bindtap="showSpec">
+					<view class="goods-spec-box-box">
+						<view class="goods-spec">规格</view>
+						<view class="goods-spec-content text1">田园四件套花</view>
+					</view>
+					<view class="goods-right-icon"> > </view>
+				</view>
+				<view class="goods-spec-box" bindtap="showParams">
+					<view class="goods-spec-box-box">
+						<view class="goods-spec">参数</view>
+						<view class="goods-spec-content text1">品牌 质地...</view>
+					</view>
+					<view class="goods-right-icon"> > </view>
+				</view>
+			</view>
+			<!--  -->
+			<view class="spell-men">
+				<view class="spell-men-title">
+					<view class="spell-men-title-left">
+						<p>5个人在拼单</p>
+					</view>
+					<view class="spell-men-title-right">
+						<view class="spell-men-title-right-title">查看更多</view>
+						<view class="recom-header-icon"> > </view>
+					</view>
+				</view>
+				<view class="spell-men-msgs">
+					<!-- spell-men-msgs-item -->
+					<view class="spell-men-msgs-item" wx:for="{{2}}">
+						<view class="spell-men-item-left">
+							<image class="spell-men-img" src=""></image>
+							<p>反倒是反倒是</p>
+						</view>
+						<view class="spell-men-item-right">
+							<view class="spell-item-right-time">
+								<view class="spell-right-num">还差<p>1人</p>拼成</view>
+								<view class="spell-right-time">时间229:3993</view>
+							</view>
+							<view class="spell-men-btn">去拼团</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+
+		<!--    评价=================================-->
+		<view class="comment-cont">
+			<view class="comment-header">
+				<view class="comment-header-com">
+					<view class="comment-left-icon"></view>
+					<view class="comment-left-tit">评价</view>
+					<view class="comment-left-num">(15698)</view>
+				</view>
+				<view class="comment-header-com">
+					<view class="comment-good">好评率</view>
+					<view class="comment-percent">99%</view>
+					<view class="comment-right-icon"> > </view>
+				</view>
+			</view>
+			<view class="comment-num-wrap">
+				<view class="comment-num-items">晒图(125000000000000009)</view>
+				<view class="comment-num-items">实惠(12569)</view>
+				<view class="comment-num-items">差评(12569)</view>
+			</view>
+			<view class="comment-member-com-item" wx:for="{{3}}">
+				<view class="comment-member-com">
+					<view class="comment-member-left">
+						<!-- 头像-->
+						<view class="comment-member-header">
+							<image src="https://img.xmsmoo.com/upload/simu/20191022154847476843.png"></image>
+						</view>
+						<view class="comment-member-info">
+							<view class="comment-member-name">蜘蛛侠</view>
+							<view class="comment-level-box">
+								<view class="comment-member-level" wx:for="{{5}}">
+									<!-- 星星等级-->
+									<image src="https://img.xmsmoo.com/upload/simuIcon/20191024105047932709.png"></image>
+								</view>
+							</view>
+						</view>
+					</view>
+					<!-- 右边日期-->
+					<view class="comment-member-right"> 2019-10-10 11:48</view>
+				</view>
+				<view class="comment-member-content text2">格调满满，尤加利的味道很喜欢，自己也多折了支新鲜的进去， 气味更加浓郁，很喜欢这种小清新的感觉~了支新鲜的进去，
+					气味更加浓郁，很喜欢这种小清新的感觉</view>
+				<view class="comment-goodsImg-box">
+					<view class="comment-goods-img" wx:for="{{6}}">
+						<image src="https://img.xmsmoo.com/upload/simu/20191024114521908116.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="comment-all" bindtap="toEvalDet">查看全部评价</view>
+		</view>
+		<!--    店铺推荐===========================-->
+		<view class="recom-wrap">
+			<view class="recom-header">
+				<view class="recom-header-left">店铺推荐</view>
+				<view class="recom-header-right">
+					<view class="recom-header-more">查看更多</view>
+					<view class="recom-header-icon"> > </view>
+				</view>
+			</view>
+			<!--    推荐商品--->
+			<view class="recom-goods-list">
+				<view class="recom-goods-item" wx:for="{{5}}">
+					<view class="recom-goodsImg">
+						<image src="https://img.xmsmoo.com/upload/simu/20191024140836348174.png"></image>
+					</view>
+					<view class="recom-goodsName text2">
+						北欧简约干花瓶摆件客厅插花简约装饰...
+						设手工陶瓷小花瓶
+					</view>
+					<view class="recom-goodsPrice">￥49.80</view>
+				</view>
+			</view>
+		</view>
+		<!--    图文详情==========================-->
+		<view class="goodsDetail-footer">
+			<view class="pic-Det">
+				<view class="pic-line"></view>
+				<view class="pic-tit">图文详情</view>
+				<view class="pic-line"></view>
+			</view>
+			<template is="wxParse"></template>
+		</view>
+
+
+
+		<!--    加入购物车=========================-->
+		<view class="goodsDet-footer">
+			<view class="goods-collect" bindtap="collectGoods">
+				<view class="collectImg" wx:if="{{starStatus}}">
+					<image src="https://img.xmsmoo.com/upload/simuIcon/20191024105008756160.png"></image>
+				</view>
+				<view class="collectImg" wx:else>
+					<image src="https://img.xmsmoo.com/upload/simuIcon/20191024105047932709.png"></image>
+				</view>
+				<view class=" collectTxt {{!starStatus?'collectTxt-active':''}}">收藏</view>
+			</view>
+			<view class="goods-collect">
+				<view class="collectImg">
+					<image src="https://img.xmsmoo.com/upload/simuIcon/20191024151826323227.png"></image>
+				</view>
+				<view class="collectTxt">客服</view>
+			</view>
+			<navigator hover-class="none" url="/pages/cart/cart" class="goods-collect">
+				<view class="collectImg">
+					<image src="https://img.xmsmoo.com/upload/simuIcon/20191024151848145377.png"></image>
+				</view>
+				<view class="collectTxt">购物车</view>
+			</navigator>
+			<view class="goodsSelec">
+				<view class="goodsAdd">
+					<view class="goodsAdd-top">￥96.00</view>
+					<view class="goodsAdd-bottom">单独购买</view>
+				</view>
+				<view class="goodsBuy" bindtap="toBuyNow">
+					<view class="goodsBuy-top">￥80.00</view>
+					<view class="goodsBuy-bottom">发起拼单</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<!--    优惠券弹窗-->
+	<view class="couponToast-cont" wx:if="{{couponMaskStatus}}">
+		<view class="coupon-mask"></view>
+		<view class="coupon-toast">
+			<view class="couponToast-header">
+				<view class="couponToast-tit">优惠</view>
+			</view>
+			<view class="couponToast-middle">
+				<view class="saleMethods">促销</view>
+				<!-- 优惠活动--------->
+				<view class="saleMethods-box" wx:for="{{2}}">
+					<view class="saleMethods-one">赠品</view>
+					<view class="saleMethods-det text1">购买食品部分品类满1元即返茶叶300立减...购买食品部分品类满1元即返茶叶300立减</view>
+				</view>
+
+
+				<view class="saleMethods">领券</view>
+				<!--     购物券   -->
+				<view class="{{item.use?'couponUse ':'couponUsed'}} " wx:for="{{couponUse}}">
+					<view class="couponUse-left">
+						<view class="couponUse-leftTop">
+							<view class="couponUse-icon">￥</view>
+							<view class="couponUse-worth">10</view>
+							<view class="couponUse-txt">店铺优惠券</view>
+						</view>
+						<view class="couponUse-for">新用户可用</view>
+						<view class="couponUse-for">有效期2019.06.06-2019.10.06</view>
+					</view>
+					<view class="couponUse-right" bindtap="getCoupon" wx:if="{{item.use}}" data-index="{{index}}">立即领取</view>
+					<view class="couponUse-right" wx:else>已领取</view>
+				</view>
+			</view>
+			<!--        完成-->
+			<view class="couponToast-footer">
+				<view class="successBtn" bindtap="getCouSuccess">完成</view>
+			</view>
+		</view>
+	</view>
+	<!--规格详情弹窗-->
+	<view wx:if="{{sepcMaskStatus}}">
+		<view class="coupon-mask"></view>
+		<view class="coupon-toast">
+			<!--  商品信息    -->
+			<view class="specToast-header">
+				<view class="specToast-left">
+					<view class="specToast-leftImag">
+						<image src="https://img.xmsmoo.com/upload/simu/20191025092647769992.png"></image>
+					</view>
+					<view class="specToast-leftInfo">
+						<view class="specToast-price">
+							<view class="specToast-priceIcon">￥</view>
+							<view class="specToast-price-price">49.80</view>
+						</view>
+						<view class="specToast-storeLeft">库存剩10264件</view>
+						<view class="specToast-leftTxt">选择 颜色分类</view>
+					</view>
+				</view>
+				<view class="specToast-right" bindtap="showSpec">
+					<image src="https://img.xmsmoo.com/upload/simuIcon/20191025093953561921.png"></image>
+				</view>
+			</view>
+			<!--可选择的规格-->
+			<view class="spec-txt">规格</view>
+			<view class="spec-list">
+				<view class="spec-item spec-item-active">
+					<image src="https://img.xmsmoo.com/upload/simu/20191025101918399669.jpg"></image>
+					<view class="spec-spec">亚光花插-宝兰01</view>
+				</view>
+				<view class="spec-item spec-item-false">
+					<image src="https://img.xmsmoo.com/upload/simu/20191025101918399669.jpg"></image>
+					<view class="spec-spec">亚光花插-宝兰01</view>
+				</view>
+				<view class="spec-item" wx:for="{{10}}">
+					<image src="https://img.xmsmoo.com/upload/simu/20191025101918399669.jpg"></image>
+					<view class="spec-spec">亚光花插-宝兰01</view>
+				</view>
+				<view class="spec-item">
+					<image src="https://img.xmsmoo.com/upload/simu/20191025101918399669.jpg"></image>
+					<view class="spec-spec text1">亚光花插不不不不不不不01</view>
+				</view>
+			</view>
+			<view class="spec-numBox">
+				<view class="spec-numTit">购买数量</view>
+				<view class="spec-numBtn">
+					<view class="spec-numSub" bindtap="amouSub">-</view>
+					<view class=" spec-numSub spec-amou">{{specNum}}</view>
+					<view class="spec-numSub" bindtap="amouAdd">+</view>
+				</view>
+			</view>
+			<view class="spec-submit-box">
+				<view class="spec-submit">
+					<view class="spec-addCart">加入购物车</view>
+					<view class="spec-buyNow">立即购买</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!--产品参数弹窗-->
+	<view wx:if="{{paramStatus}}">
+		<view class="coupon-mask"></view>
+		<view class="coupon-toast">
+			<view class="paramTit">产品参数</view>
+			<view class="params-list">
+				<view class="params-item" wx:for="{{3}}">
+					<view class="param-left ">品牌瓷蝶llattttt一月又一月</view>
+					<view class="param-right">瓷蝶突突突突突突拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖</view>
+				</view>
+
+			</view>
+			<view class="params-footerBox" bindtap="showParams">
+				<view class="params-submit">
+					<view>完成</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+	<!-- 参与拼团 -->
+	<view class="team-box" wx:if="{{teamstate}}">
+		<view class="screen"></view>
+		<view class="team-msg">
+			<view class="team-msg-top">
+				<view class="top-bottom-top-bottom">参与蜘蛛侠的拼单</view>
+				<view class="top-bottom-top-top">
+					<p>仅差</p>
+					<p>1人</p>
+					<p>名额，22:26:45后结束</p>
+				</view>
+			</view>
+			<view class="team-msg-centent">
+				<view class="men-img men-main">
+					<image src="../images/goods.png"></image>
+				</view>
+				<view class="men-img men-last"></view>
+			</view>
+			<view class="team-msg-btn">参与拼单</view>
+			<view class="team-del-img" bindtap="onteamOff">
+				<image src="https://img.xmsmoo.com/upload/icon1/20190928162504875919.png"></image>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,243 @@
+page {
+	background: #f2f2f2;
+	width: 100%;
+	height: 100%;
+}
+.wrap {
+	position: relative;
+	width: 100%;
+	font-size: 28rpx;
+	box-sizing: border-box;
+}
+.contents {
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+}
+.top {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 70rpx 0;
+	height: 520rpx;
+	width: 100%;
+	background: #ffffff;
+	box-sizing: border-box;
+}
+.top-top {
+	display: flex;
+	align-items: center;
+}
+.top-top-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	width: 40rpx;
+	height: 40rpx;
+}
+.top-top-img image {
+	width: 40rpx;
+	height: 40rpx;
+}
+.top-top-title {
+	font-size: 30rpx;
+	margin-left: 20rpx;
+}
+.top-bottom {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 60rpx;
+	width:550rpx;
+	height:250rpx;
+	border-radius: 10rpx;
+	border: 1px solid #f2f2f2;
+	box-sizing: border-box;
+}
+.top-bottom-top {
+	position: relative;
+	top: -38rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 30rpx;
+	min-width: 295rpx;
+	font-size: 26rpx;
+	background: #ffffff;
+	letter-spacing: -0.5px;
+	box-sizing: border-box;
+}
+.top-bottom-top-top {
+	display: flex;
+	align-items: center;
+	margin-bottom: 3rpx;
+}
+.top-bottom-top-top>p:nth-last-of-type(2){
+	color: #FF4439;
+}
+.team-state-img {
+	position: absolute;
+	top: -20rpx;
+	right: -10rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	width: 92rpx;
+	height: 92rpx;
+	border-radius: 90rpx;
+}
+.team-state-img image {
+	width: 92rpx;
+	height: 92rpx;
+}
+/*  */
+.men-imgs {
+	 display: flex;
+	 
+ }
+ .men-img {
+	 width: 90rpx;
+	 height: 90rpx;
+	 border-radius: 50rpx;
+	
+ }
+ .men-last {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 margin-left:30rpx;
+	 color: #8f8f8f;
+	 font-size: 40rpx;
+	 box-sizing: border-box;
+	 border: 1rpx dashed #8f8f8f;
+ }
+ .men-main {
+	 position: relative;
+	 border: 2rpx solid #FF4439;
+ }
+ .men-img image{
+	 position: relative;
+	 overflow: hidden;
+	 width: 90rpx;
+	 height: 90rpx;
+	 border-radius: 50rpx;
+	 z-index: 1;
+ }
+ .men-main::after{
+	 position: absolute;
+	 right: 50%;
+	 top: -5rpx;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 width: 55rpx;
+	 height: 30rpx;
+	 content: '拼主';
+	 color: #FFFFFF;
+	 background: #FF4439;
+		border-radius: 10rpx;
+		font-size: 22rpx;
+		border: 1rpx solid #FFFFFF;
+		z-index: 9;
+ } 
+ .men-last::after {
+	 position: absolute;
+	 top: 30rpx;
+	 left: 35rpx;
+	 width: 0;
+	 height: 0;
+	 content: '?';
+	 line-height: 0.8;
+	 
+ }
+ .men-last image {
+	 position: relative;
+	 z-index: 2;
+ }
+ /*  */
+  /* 拼单规则 */
+ .spell-planing {
+ 	 display: flex;
+ 	 align-items: center;
+ 	 justify-content: space-between;
+	 margin: 20rpx 0;
+ 	 width: 100%;
+ 	 height: 85rpx;
+ 	 padding: 0 30rpx;
+ 	 font-size: 28rpx;
+ 	 background: #FFFFFF;
+ 	border-bottom:1px solid #f2f2f2;  
+ 	 box-sizing: border-box;
+ }
+ .planing-title {
+ 	 font-size: 32rpx;
+ }
+ .planing-msg {
+ 	 display: flex;
+ 	 align-items: center;
+ 	 font-size: 28rpx;
+ 	 color: #8E8E8E;
+ }
+ .order-text>p{
+ 	 margin-right: 10rpx;
+ }
+ .right-icol {
+ 	 transform: scaleY(1.5);
+ 	 transform-origin: right 20rpx; 
+ 	 line-height: 1;
+ }
+ /*  */
+ .team-btns {
+	 margin: 20rpx 0;
+	 padding:  0 20rpx;
+	 width: 100%;
+	 box-sizing: border-box;
+ }
+ .team-btn-box {
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-between;
+	 width: 100%;
+	 box-sizing: border-box;
+ }
+ .team-btn {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 min-width: 220rpx;
+	 height: 80rpx;
+	 background: #ffffff;
+	 border-radius: 5rpx;
+ }
+	 
+ .team-btn-box>.team-btn:first-of-type{
+	 background: #FC2E22;
+	 color: #ffffff;
+ }
+ .team-active {
+	 display: flex;
+	 justify-content: center;
+	 margin-top: 60rpx;
+	 position: 0 20rpx;
+	 width: 100%;
+	 box-sizing: border-box;
+ }
+ .team-active-img {
+	width:710rpx;
+	height:175rpx;
+	background:rgba(255,255,255,1);
+	box-shadow:0px 2rpx 9rpx 0rpx rgba(99,99,99,0.18);
+	border-radius:10rpx;
+  box-sizing: border-box;
+ }
+  .team-active-img  image {
+	 width:710rpx;
+	 height:175rpx; 
+  }

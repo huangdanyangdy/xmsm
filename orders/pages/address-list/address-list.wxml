@@ -1,0 +1,35 @@
+<view class="wrap">
+    <view class="contents">
+        <view class="address-list">
+        <swiper class="address-swiper" wx:for="{{address}}" previous-margin="650rpx">
+        <swiper-item class="adddress-swiper-item">
+          <view class="address">
+			    	<view class="address-msg" bindtap="onAddress" data-address-id="{{item.addressId}}" data-index="{{index}}"> 
+					<view class="address-img">
+					<image wx:if="{{item.addressDefault}}" src="https://img.xmsmoo.com/upload/4/20191024095159290771.png"></image>
+					<image wx:else src="https://img.xmsmoo.com/upload/4/20191024095212538146.png"></image>
+					</view>
+					<view class="address-right" >
+						<view class="address-right-top">
+							<view class="address-name text1">{{item.memberName}}</view>
+							<view class="address-phone">{{item.memberTel}}</view>
+						</view>
+						<view class="address-content text1">{{item.addressProvince}}{{item.addressCity}}{{item.addressDistrict}}{{item.addressDetail}}</view>
+					</view>
+				</view>
+				<view class="right-icon" bindtap="OnaddressSet" data-address-id="{{item.addressId}}">编辑</view>
+			</view>
+        </swiper-item>
+         <swiper-item class="del-btn">
+					 <view class="delete" bindtap="Ondelete" data-address-id="{{item.addressId}}">删除</view>
+					</swiper-item>
+        </swiper> 
+        </view>
+        <view class="address-btns">
+					<view class="address-btn-box">
+						<view class="address-btn" bindtap="OnwxAddress">微信导入</view>
+            <view class="address-btn" bindtap="OnaddAddress">新增收货地址</view>
+					</view>
+        </view>
+    </view>
+</view>

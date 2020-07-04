@@ -1,0 +1,52 @@
+/* orders/pages/scanRecord/scanRecord.wxss */
+/*浏览商品========================*/
+page{
+    font-family:PingFang SC;
+    color:#212121;
+}
+.recom-list{
+    background:#fff;
+    padding:0 20rpx;
+    padding-bottom: 30rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+.recom-list:last-of-type{
+   margin-bottom:30rpx;
+}
+.scan-date{
+    display: flex;
+    align-items: center;
+    height:90rpx;
+    font-size:28rpx;
+}
+.recom-goods-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:40rpx 18rpx;
+}
+.recom-goods-item{
+    width: 225rpx;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+.recom-goodsImg{
+    width:225rpx;
+    height:225rpx;
+    border-radius:5rpx;
+    overflow: hidden;
+}
+.recom-goodsImg image{
+    width:225rpx;
+    height:225rpx;
+}
+.recom-goodsName{
+    font-size:24rpx;
+    font-family:PingFang SC;
+    color:#212121;
+}
+.recom-goodsPrice {
+    font-size: 24 rpx;
+    font-weight: bold;
+    color: rgba(255, 77, 66, 1);
+}

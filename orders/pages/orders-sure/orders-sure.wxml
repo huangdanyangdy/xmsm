@@ -1,0 +1,120 @@
+<view class="wrap">
+	<view class="top"></view>
+	<view class="contents">
+		<view class="address-box">
+			<view class="address" bindtap="onAddress">
+				<view class="address-msg"> 
+					<view class="address-img">
+						<image src="https://img.xmsmoo.com/upload/4/20191106172642589023.png"></image>
+					</view>
+					<view class="address-right" wx:if="{{address.memberName}}">
+						<view class="address-right-top">
+							<view class="address-name text1">{{address.memberName}}</view>
+							<view class="address-phone">{{address.memberTel}}</view>
+						</view>
+						<view class="address-content text1">{{address.addressProvince}}{{address.addressCity}}{{address.addressDistrict}}{{address.addressDetail}}</view>
+					</view>
+					<view class="address-right" wx:else>请选择地址</view>
+				</view>
+				<view class="right-icon">></view>
+			</view>
+		</view>
+		<view class="goods-box">
+			<view class="goods">
+				<view class="goods-top">
+					<view class="goods-title">商品详情</view>
+				</view>
+				<view class="goods-list">
+					<view class="goods-item" wx:for="{{cartList}}">
+						<view class="goods-img">
+							<image src="{{imgurl}}{{item.goodsPic}}"></image>
+						</view>
+						<view class="goods-item-right">
+							<view class="goods-item-right-top">
+								<view class="goods-name text2">{{item.goodsName}}</view>
+								<view class="goods-specs">
+									<view class="goods-specs-class">{{item.goodsSkuInfo}}</view>
+									<!-- <view class="goods-specs-name">深蓝色;</view> -->
+								</view>
+							</view>
+							<view class="goods-item-right-bottom">
+								<view class="goods-price">¥{{item.goodsPrice}}</view>
+								<view class="goods-num">×{{item.goodsNum}}</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!--  -->
+				<view class="order-msg">
+					<view class="order-item" bindtap="onConpons">
+						<view class="order-item-left">
+							<view class="order-item-left-name">优惠券</view>
+						</view>
+						<view class="order-item-right">
+							<view class="order-item-right-title">使用优惠券</view>
+							<view class="right-icon">></view>
+						</view>
+					</view>
+					<view class="order-item">
+						<view class="order-item-left">
+							<view class="order-item-left-name">配送方式</view>
+							<view class="order-item-left-msg">普通配送</view>
+						</view>
+						<view class="order-item-right">
+							<view class="order-item-right-title">快递  免运费</view>
+						</view>
+					</view>
+					<view class="order-item">
+						<view class="order-item-left">
+							<view class="order-item-left-name">买家留言</view>
+							<view class="order-item-left-msg text1">建议留言前先与商家沟通确认</view>
+						</view>
+					</view>
+				</view>
+				<!--  -->
+				<view class="goods-bottom">
+					<view class="goods-total">
+						<view class="goods-nums">共{{ordres.goodsNums}}件,</view>
+						<view class="goods-total-title">合计</view>
+						<view class="goods-prices">
+            <p>¥</p>
+             <p>{{orders.ordersGoodsAmount}}</p>
+            </view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!--  -->
+	<view class="footer">
+		<view class="goods-total">
+			<view class="goods-nums">共{{ordres.goodsNums}}件,</view>
+			<view class="goods-total-title">合计</view>
+			<view class="goods-prices">
+      <p>¥</p>
+      <p>{{orders.ordersTotalAmount}}</p>
+       </view>
+		</view>
+		<view class="order-btn" bindtap="GetOrder">提交订单</view>
+	</view>
+	<!--优惠券 -->
+	<view class="conpons-box" wx:if="{{conpons}}">
+		<view class="screen" bindtap="onConpons"></view>
+		<view class="conpons">
+			<view class="conpons-top">优惠券</view>
+			<view class="conpons-list">
+				<view class="conpons-item" wx:for="{{conponList}}" wx:for-index="conponsIndex" bindtap="selectConpons" data-member-coupon-id="{{item.memberCouponId}}" data-index="{{conponsIndex}}">
+					<view class="conpons-item-left text1">{{item.couponTitle}}</view>
+					<view class="conpons-item-right">
+						<image wx:if="{{conponsNum==item.memberCouponId}}" src="https://img.xmsmoo.com/upload/4/20191024095159290771.png"></image>
+						<image wx:else src="https://img.xmsmoo.com/upload/4/20191024095212538146.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="conpons-btns">
+				<view class="conpons-btn" bindtap="onConpons">完成</view>
+			</view>
+		</view>
+	</view>
+	<!--  -->
+</view>

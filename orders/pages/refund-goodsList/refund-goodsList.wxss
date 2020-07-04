@@ -1,0 +1,126 @@
+.cart-list {
+    padding-top: 20rpx;
+    width: 100%;
+    box-sizing: border-box;
+}
+.goods-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 40rpx 20rpx;
+    margin-bottom: ;
+    width: 100%;
+    height: 260rpx;
+    box-sizing: border-box;
+    background: #ffffff;
+    margin-bottom: 20rpx;
+}
+.goods-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rpx;
+    height: 30rpx;
+}
+.goods-select image {
+    width: 30rpx;
+    height: 30rpx;
+}
+.goods-item-right {
+    display: flex;
+    margin-left: 20rpx;
+
+}
+.goods-img {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 10rpx;
+}
+.goods-img image{
+    width: 180rpx;
+    height: 180rpx;
+}
+.goods-msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20rpx;
+    box-sizing: border-box;
+}
+.goods-name {
+    font-size: 28rpx;
+    margin-bottom: 10rpx;
+    line-height: 36rpx;
+}
+.goods-specs-box {
+    display: flex;
+    align-items: center;
+}
+.goods-specs {
+    display: flex;
+    align-items: center;
+    font-size: 26rpx;
+    color: #777777;
+    border-radius: 5rpx;
+    margin-top: 5rpx;
+    box-sizing: border-box;
+}
+.godos-specs-left {
+    display: flex;
+    align-items: center;
+}
+.goods-specs-left-left {
+    margin-right: 10rpx;
+}
+.goods-specs-right{
+    transform-origin: 1 20rpx;
+    transform: scaleX(1.8);
+    font-size: 18rpx;
+    margin-left: 10rpx;
+}
+.goods-price {
+    display: flex;
+    align-items: flex-end;
+    font-size: 32rpx;
+    color: #FF443A;
+    font-weight: 900;
+}
+
+/*  */
+.goods-btns {
+    position: absolute;
+    right: 20rpx;
+    bottom: 40rpx;
+    display: flex;
+    align-items: center;
+    height: 40rpx;
+    line-height: 0.8;
+    box-sizing: border-box;
+}
+.minus,.add,.goods-num {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeeee;
+    height: 100%;
+    border-radius: 10rpx;
+}
+.minus,.add {
+    width: 40rpx;
+    color: #797979;
+    font-size: 32rpx;
+    padding-bottom:5rpx;
+    box-sizing: border-box;
+}
+.goods-num {
+    margin: 0 2rpx;
+    min-width: 40rpx;
+    max-width: 150rpx;
+    font-size: 26rpx;
+    box-sizing: border-box;
+}

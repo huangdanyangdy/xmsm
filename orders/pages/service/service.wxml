@@ -1,0 +1,51 @@
+<view class="wrap">
+	<view class="contents">
+		<view class="goods-list">
+			<view class="goods-item">
+				<view class="goods-img">
+					<image src="{{imgurl}}{{goods.goodsPic}}"></image>
+				</view>
+				<view class="goods-item-right">
+					<view class="goods-item-right-top">
+						<view class="goods-name text2">{{goods.goodsName}}</view>
+						<view class="goods-specs">
+							<view class="goods-specs-class">{{goods.goodsSkuInfo}}</view>
+							<!-- <view class="goods-specs-name">深蓝色;</view> -->
+						</view>
+					</view>
+					<view class="goods-item-right-bottom">
+						<view class="goods-price">¥{{goods.goodsPrice}}</view>
+						<view class="goods-num">×{{goods.goodsNum}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="service">
+			<view class="service-item" bindtap="OnRefundMoney">
+				<view class="service-item-left">
+					<view class="service-img">
+						<image src="https://img.xmsmoo.com/upload/simu/20191028162310041481.png"></image>
+					</view>
+					<view class="service-msg" >
+						<view class="service-name">仅退款</view>
+						<view class="service-title">未收到货,或无需退货仅需退款</view>
+					</view>
+				</view>
+				<view class="service-item-right">></view>
+			</view>
+			<!--  -->
+			<view class="service-item"  bindtap="OnRefundGoods">
+				<view class="service-item-left">
+					<view class="service-img">
+						<image src="https://img.xmsmoo.com/upload/simu/20191028163745581582.png"></image>
+					</view>
+					<view class="service-msg" >
+						<view class="service-name">退货退款</view>
+						<view class="service-title">已收到货，需要退货退款</view>
+					</view>
+				</view>
+				<view class="service-item-right">></view>
+			</view>
+		</view>
+	</view>
+</view>

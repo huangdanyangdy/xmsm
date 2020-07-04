@@ -1,0 +1,49 @@
+<!--协商记录-->
+<view class="wrap">
+	<view class="contents">
+		<!--商家窗口-->
+		<view class="store-window-box">
+			<view class="store-window" wx:for='{{3}}'>
+				<view class="jiao-left"></view>
+				<view class="store-info">
+					<view class="store-info-container">
+						<view class="store">商家</view>
+						<view class="store-time">2019-06-15 13:25:23</view>
+					</view>
+				</view>
+				<view class="refund-res-container">
+					<view class="refund-reject">拒绝退款申请，需买家修改退款申请</view>
+					<view class="reject-reason">拒绝理由：111拒绝退款申请，拒绝退款申请，需买家修改退款申请</view>
+				</view>
+			</view>
+		</view>
+		<view class="buyer-window-box">
+			<!--买家窗口-->
+			<view class="buyer-window" wx:for="{{3}}">
+				<view class="jiao-right"></view>
+				<view class="store-info">
+					<view class="buyer-info-container">
+						<view class="store">买家</view>
+						<view class="store-time"> 2019-06-15 13:25:23 </view>
+					</view>
+				</view>
+				<view class="refund-res-container">
+					<view class="refund-reject">发起了退款申请，等待商家处理</view>
+					<view class="reject-reason">
+						退款方式：仅退款，货物状态：已发货，
+						退款原因：未按照约定时间发货退款金额：￥300.00，退款数量：2件，手机号码：12563985478，
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!--    底部联系商家、发表留言-->
+<view class="footer-container">
+	<view class="footer-btns">
+		<view class="footer-contact">联系商家</view>
+		<view class="footer-contact">发表留言</view>
+	</view>
+</view>
+

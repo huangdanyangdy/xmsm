@@ -1,0 +1,74 @@
+<!--    评价=================================-->
+<view class="wrap">
+  <view class="evalWrap">
+    <view class="comment-cont">
+        <view  class="comment-header">
+            <view class="comment-header-com">
+                <view class="comment-left-icon"></view>
+                <view class="comment-left-tit">评价</view>
+                <view class="comment-left-num">({{num}})</view>
+            </view>
+            <view class="comment-header-com">
+                <view class="comment-good">好评率</view>
+                <view class="comment-percent">{{goodPercent}}%</view>
+            </view>
+        </view>
+        <view class="comment-num-wrap">
+            <view class="comment-num-items"  wx:for="{{evaAll}}" wx:for-item="evaAll">{{evaAll.goodsEvaTagValue}}({{evaAll.statisticsNum}})</view>
+        </view>
+        <!-- <view class="comment-more">∨</view> -->
+    </view>
+    <view class="comment-cont-mid">
+        <view class="comment-member-item" wx:for="{{evaList}}" wx:for-item="evaList">
+            <view class="comment-member-com">
+                <view class="comment-member-left">
+                    <!-- 头像-->
+                    <view class="comment-member-header"><image src="{{evaList.memberHeadimgurl}}"></image></view>
+                    <view class="comment-member-info">
+                        <view class="comment-member-name">{{evaList.memberNickname}}</view>
+                        <view  class="comment-level-box" >
+                            <view class="comment-member-level" wx:for="{{evaList.goodsEvaluateScores}}">
+                                <!-- 星星等级-->
+                                <image src="https://img.xmsmoo.com/upload/simuIcon/20191024105047932709.png"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <!-- 右边日期-->
+                <view class="comment-member-right">{{evaList.goodsEvaluateAddTime}}</view>
+            </view>
+            <view class="comment-member-content">{{evaList.goodsEvaluateContent}}</view>
+            <view class="comment-goodsImg-box">
+                <view wx:for="{{evaList.goodsEvaluatePic}}" wx:for-item="imgList">
+                    <view class="comment-goods-img"  bindtap="preViewImage" data-current="{{current}}" ><image src="{{imgurl}}{{imgList}}"></image></view>
+                </view>
+            </view>
+            <view class="comment-goodsSpec">{{evaList.goodsSpecName}}</view>
+        </view>
+    </view>
+</view>
+<!--    加入购物车=========================-->
+<view class="goodsDet-footer">
+    <view class="goods-collect" bindtap="collectGoods">
+        <view class="collectImg" wx:if="{{starStatus}}"><image src="https://img.xmsmoo.com/upload/simuIcon/20191024105008756160.png"></image></view>
+        <view class="collectImg" wx:else><image src="https://img.xmsmoo.com/upload/simuIcon/20191024105047932709.png"></image></view>
+        <view class=" collectTxt {{!starStatus?'collectTxt-active':''}}" >收藏</view>
+    </view>
+    <view>
+        <button open-type="contact" class="goods-collect">
+            <view class="collectImg"><image src="https://img.xmsmoo.com/upload/simuIcon/20191024151826323227.png"></image></view>
+            <view class="collectTxt">客服</view>
+        </button>
+    </view>
+
+    <view class="goods-collect" bindtap="toShopCart">
+        <view class="collectImg"><image src="https://img.xmsmoo.com/upload/simuIcon/20191024151848145377.png"></image></view>
+        <view class="collectTxt">购物车</view>
+    </view>
+    <view class="goodsSelec">
+        <view class="goodsAdd" bindtap="addCart">加入购物车</view>
+        <view class="goodsBuy">立即购买</view>
+    </view>
+</view>
+</view>
+

@@ -1,0 +1,396 @@
+page {
+    background: #F2F2F2;
+}
+
+.mine-container {
+    font-family: PingFang SC;
+    color: #212121;
+    margin-bottom: 150rpx;
+}
+
+
+/*顶部橙色背景-----------*/
+
+.mine-top {
+    width: 100%;
+    height: 400rpx;
+    background: url("https://img.xmsmoo.com/upload/simuIcon/20191026134219482401.png");
+    background-size: 100%;
+    border-bottom-left-radius: 375rpx 30rpx;
+    border-bottom-right-radius: 375rpx 30rpx;
+}
+
+.nav-top {
+    height: 170rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-topLeft {
+    display: flex;
+    padding-left: 40rpx;
+}
+
+.nav-topRight {
+    display: flex;
+    white-space: nowrap;
+}
+
+.nav-memberImg {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    flex: 0 0 auto;
+}
+
+.nav-memberImg image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.nav-infoBox {
+     width:320rpx;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 20rpx;
+}
+
+.nav-memName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+
+.nav-vipName {
+    font-size: 34rpx;
+    color: #fff;
+}
+
+.nav-VipImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28rpx;
+    height: 28rpx;
+    margin-left: 10rpx;
+}
+
+.nav-VipImg image {
+    width: 28rpx;
+    height: 28rpx;
+}
+
+.nav-vipId {
+    font-size: 28rpx;
+    color: #fff;
+}
+
+.nav-topRight {
+    width: 180rpx;
+    height: 50rpx;
+    background: rgba(255, 255, 255, 0.5);
+    border-top-left-radius: 25rpx;
+    border-bottom-left-radius: 25rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-rightImg {
+    width: 33rpx;
+    height: 29rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10rpx;
+}
+
+.top-rightImg image {
+    width: 33rpx;
+    height: 29rpx;
+}
+
+.member-central {
+    font-size: 24rpx;
+    color: #fff;
+}
+
+.nav-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.itemsNum {
+    font-size: 30rpx;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 6rpx;
+}
+
+.items-name {
+    font-size: 24rpx;
+    color: #fff;
+    font-weight: 500;
+}
+
+
+/*我的订单信息=========*/
+
+.mine-orderInfo {
+    width: 710rpx;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 20rpx;
+    margin: 0 auto;
+    margin-top: -130rpx;
+    box-sizing: border-box;
+}
+
+.orderInfo-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30rpx 25rpx;
+    box-sizing: border-box;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.orderTxt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+}
+
+.order-right {
+    font-size: 22rpx;
+    color: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-rightIcon {
+    font-size: 30rpx;
+    margin-bottom:7rpx;
+    transform: scaleY(1.5);
+    color: #777;
+    margin-left: 10rpx;
+}
+
+.orderInfo-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    height: 160rpx;
+}
+
+.orderInfo-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.orderInfo-icon {
+    width: 50rpx;
+    height: 50rpx;
+    margin-bottom: 10rpx;
+}
+
+.orderInfo-icon image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.orderInfo-status {
+    font-size: 24rpx;
+}
+
+
+/*<!--    工具与服务===========-->*/
+
+.mine-middle {
+    width: 710rpx;
+    /* height:515rpx; */
+    background: rgba(255, 255, 255, 1);
+    border-radius: 20rpx;
+    margin: 20rpx;
+    margin-bottom: 0rpx;
+}
+
+.service-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.serviceImg {
+    width: 55rpx;
+    height: 55rpx
+}
+
+.serviceImg image {
+    width: 55rpx;
+    height: 55rpx
+}
+
+.serviceTxt {
+    font-size: 24rpx;
+    margin-top: 20rpx;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40rpx;
+    padding: 40rpx 20rpx;
+}
+
+
+/*<!--  为你推荐==================-->*/
+
+.pic-Det {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40rpx 0;
+}
+
+.pic-line {
+    width: 60rpx;
+    height: 2rpx;
+    background: #777;
+    margin: 0 30rpx;
+}
+
+.pic-tit {
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(33, 33, 33, 1);
+}
+
+.goods-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.goods-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 345rpx;
+    height: 520rpx;
+    background: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 20rpx;
+}
+
+.goods-msg {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 12rpx;
+    padding-bottom: 20rpx;
+    box-sizing: border-box;
+}
+
+.goods-img,
+.goods-img image {
+    flex: 0 0 auto;
+    width: 345rpx;
+    height: 345rpx;
+}
+
+.goods-name {
+    flex: 0 0 auto;
+    font-size: 26rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+.goods-offers {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: inherit;
+    margin-top: -20rpx;
+}
+
+.goods-offers-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12rpx;
+    padding: 0 8rpx;
+    height: 32rpx;
+    font-size: 20rpx;
+    border: 1px solid rgba(213, 49, 40, 1);
+    border-radius: 5rpx;
+    color: rgba(213, 49, 40, 1);
+}
+
+.goods-prices {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.goods-prices-left {
+    display: flex;
+    align-items: flex-end;
+}
+
+.goods-price-now {
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    color: rgba(255, 73, 46, 1);
+    font-size: 32rpx;
+    line-height: 1;
+    margin-right: 20rpx;
+}
+
+.goods-price-now>p:first-of-type {
+    font-size: 24rpx;
+}
+
+.goods-price-now>p:last-of-type {
+    margin-left: 5rpx;
+}
+
+.goods-offers-msg {
+    font-size: 26rpx;
+    color:#D53128;
+}
+
+.goods-price-old {
+    font-size: 24rpx;
+    color: #B3B3B3;
+    line-height: 1;
+    text-decoration: line-through;
+}

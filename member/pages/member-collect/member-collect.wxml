@@ -1,0 +1,25 @@
+ <!-- 单个排版 -->
+      <view class="goods-list1" >
+        <!-- wx:if="{{!layout}}"  -->
+        <view class="goods-item1" wx:for="{{goodsFavorites}}" wx:for-item="goodsFavorites">
+          <view class="goods-img1"  bindtap="onGoods"  data-goods-id="{{goodsFavorites.goodsId}}">
+            <image class="" src="{{imgurl}}{{goodsFavorites.goodsPic}}"> </image>
+          </view>
+          <view class="goods-item1-right">
+            <view class="goods-name1 text2">{{goodsFavorites.goodsName}}</view>
+            <view class="goods-item1-right-bottom">
+              <view class="goods-prices">
+                <view class="goods-prices-left">
+                  <view class="goods-price-now text1">
+                    <P>¥</P>
+                    <P>{{goodsFavorites.goodsPrice}}</P>
+                  </view>
+                </view>
+                <view class="goods-prices-right" data-goods-id="{{goodsFavorites.goodsId}}" bindtap="deleteCollect">
+                <image src="https://img.xmsmoo.com/upload/simuIcon/20191023120709270135.png"></image></view>
+            </view>
+            </view>
+          </view>
+        </view>
+        <!--  -->
+      </view>

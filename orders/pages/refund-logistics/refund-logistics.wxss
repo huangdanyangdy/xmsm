@@ -1,0 +1,239 @@
+page {
+    background: #f2f2f2;
+}
+
+.wrap {
+    position: relative;
+    width: 100%;
+    font-size: 28rpx;
+    box-sizing: border-box;
+}
+
+/*  */
+.contents {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+/*  */
+.logistics {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20rpx;
+	width: 100%;
+	height: 90rpx;
+font-weight: 500;
+background: #fff;
+	box-sizing: border-box;
+}
+.logistics-right-title{
+margin-right: 20rpx;
+}
+.logistics-right{
+	display: flex;
+	align-items: center;
+	color: #777;
+}
+.logistics-right-icol {
+	transform-origin: right 20rpx; 
+	transform: scaleY(1.5);
+	font-weight: 100;
+}
+/*  */
+.reason{
+	display: flex;
+	align-items: center;
+	padding: 0 20rpx;
+	width: 100%;
+	height: 85rpx;
+	font-weight: 500;
+	background: #ffffff;
+	border-top: 1px solid #f2f2f2;
+	border-bottom: 1px solid #f2f2f2;
+	box-sizing: border-box;
+}
+.reason-left{
+	flex: 0 0 auto;
+	margin-right: 50rpx;
+}
+.reason-right {
+	flex: 1;
+}
+.reason-right input {
+	width: 100%;
+}
+/*  */
+.receipts {
+    padding: 30rpx 20rpx;
+    width: 100%;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.receipts-imgs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20rpx 85rpx;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 25rpx;
+}
+
+.receipts-img-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180rpx;
+    height: 180rpx;
+    box-sizing: border-box;
+}
+
+.receipts-img-item>image {
+    width: 180rpx;
+    height: 180rpx;
+}
+
+.receipts-img-item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 49rpx;
+    height: 45rpx;
+}
+
+.receipts-img-item-img image {
+    width: 49rpx;
+    height: 45rpx;
+}
+
+.receipts-imgs>.receipts-img-item:last-of-type {
+    flex-direction: column;
+    border: 5rpx dashed rgba(221, 221, 221, 1);
+}
+
+.receipts-img-item-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 22rpx;
+}
+
+
+/*  */
+
+.refund-btn-box {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 48rpx;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.refund-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 710rpx;
+    height: 80rpx;
+    color: #ffffff;
+    font-size: 32rpx;
+    font-weight: 500;
+    background: linear-gradient(127deg, rgba(255, 68, 58, 1) 0%, rgba(253, 64, 27, 1) 100%);
+    border-radius: 40rpx;
+}
+/*  */
+/*  */
+/*  */
+.star-box {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+}
+.screen {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(50,50,50,0.3);
+}
+.star{
+	position: absolute;
+	bottom: 0;
+	height: 595rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	border-top-left-radius: 20rpx;
+	border-top-right-radius: 20rpx;
+	background: #ffffff;
+}
+.star-top {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	width: 100%;
+	height: 90rpx;
+	font-size: 32rpx;
+	margin-bottom: 20rpx;
+	font-weight: 500;
+	box-sizing: border-box;
+}
+.star-list {
+	padding: 0 20rpx;
+	width: 100%;
+	height: 310rpx;
+	overflow-y: scroll;
+	box-sizing: border-box;
+}
+.star-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 60rpx;
+	box-sizing: border-box;
+}
+.star-item-left {
+	font-size: 32rpx;
+}
+.star-item-right {
+	flex:  0 0 auto;
+	width: 30rpx;
+	height: 30rpx;
+}
+.star-item-right image {
+	width: 30rpx;
+	height: 30rpx;
+}
+.star-btns {
+	display: flex;
+	align-items: center;
+	padding: 0 20rpx;
+	width: 100%;
+	height: 200rpx;
+	box-sizing: border-box;
+}
+.star-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 80rpx;
+	color: #ffffff;
+	font-size: 32rpx;
+	font-weight: 500;
+	background:linear-gradient(127deg,rgba(255,68,58,1) 0%,rgba(253,64,27,1) 100%);
+	border-radius:40rpx;
+	box-sizing: border-box;
+}

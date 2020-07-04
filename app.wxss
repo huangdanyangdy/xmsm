@@ -1,0 +1,60 @@
+/**app.wxss**/
+page {
+  
+}
+.wrap {
+  font-size: 30rpx;
+  color: #212121;
+  font-family:PingFang SC;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.text{
+  white-space: normal;
+  overflow: hidden;
+}
+.text1{
+  white-space: normal;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  -webkit-line-clamp:1;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+}
+.text2{
+  white-space: normal;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  -webkit-line-clamp:2;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+}
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+/* .right-icon {
+  font-size: 30rpx;
+  transform-origin:right 20rpx ;
+  transform: scaleY(1.5);
+  color:#777;
+} */
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column{
+  display: flex;
+  justify-content:flex-start;
+  align-items:flex-start;
+  flex-direction: column;
+}

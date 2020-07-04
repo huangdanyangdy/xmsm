@@ -1,0 +1,80 @@
+<view>
+<!--    商品详情=========-->
+    <view class="module-wrap">
+        <view class="goods-item" >
+            <view class="goods-img">
+                <image src="https://img.xmsmoo.com/upload/4/20191023151059503959.png"></image>
+            </view>
+            <view class="goods-item-right">
+                <view class="goods-item-right-top">
+                    <view class="goods-name text2">时日朝歌时蜂鸣器时蜂鸣器歌时蜂鸣时蜂鸣器歌时蜂鸣时蜂鸣器歌时蜂鸣歌时蜂鸣歌时蜂鸣歌时蜂鸣歌时蜂鸣吕</view>
+                    <view class="goods-specs">
+                        <view class="goods-specs-class">颜色分类:</view>
+                        <view class="goods-specs-name">深蓝色;</view>
+                    </view>
+                </view>
+                <view class="goods-item-right-bottom">
+                    <view class="goods-price">¥33</view>
+                    <view class="goods-num">×1</view>
+                </view>
+            </view>
+        </view>
+    </view>
+<!--    评价图片==========-->
+    <view class="module-wrap">
+        <textarea  class="textarea-box" placeholder="宝贝满足您的期待吗？说说它的优点和美中不足吧.." placeholder-style="font-size:28rpx;"></textarea>
+        <view class="photot-list">
+            <view class="photot-item1">
+                <view class="photot-item" >
+                    <view class="photoIcon"><image src="https://img.xmsmoo.com/upload/simuIcon/20191028163528558122.png"></image></view>
+                    <view class="photoTxt">添加图片</view>
+                </view>
+            </view>
+
+            <view class="photot-item1" wx:for="{{5}}">
+                <image src="https://img.xmsmoo.com/upload/4/20191023151059503959.png"></image>
+            </view>
+        </view>
+    </view>
+<!--    评价星星=====-->
+    <view class="evalu-list">
+        <view class="eval-item" >
+            <view class="evalu-tit">综合评价</view>
+            <view class="stars-false">
+                <view class="stars-falseImg" wx:for="{{5}}" bindtap="blackbtp1" data-index="{{index}}">
+                    <image  wx:if="{{index>starNum1}}" src="https://img.xmsmoo.com/upload/simuIcon/20191028165501181710.png"></image>
+                    <image wx:else src="https://img.xmsmoo.com/upload/simuIcon/20191028170748973931.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="eval-item" >
+            <view class="evalu-tit">商品描述</view>
+            <view class="stars-false">
+                <view class="stars-falseImg" wx:for="{{5}}" bindtap="blackbtp2" data-index="{{index}}">
+                    <image  wx:if="{{index>starNum2}}" src="https://img.xmsmoo.com/upload/simuIcon/20191028165501181710.png"></image>
+                    <image wx:else src="https://img.xmsmoo.com/upload/simuIcon/20191028170748973931.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="eval-item" >
+            <view class="evalu-tit">物流服务</view>
+            <view class="stars-false">
+                <view class="stars-falseImg" wx:for="{{5}}" bindtap="blackbtp3" data-index="{{index}}">
+                    <image  wx:if="{{index>starNum3}}" src="https://img.xmsmoo.com/upload/simuIcon/20191028165501181710.png"></image>
+                    <image wx:else src="https://img.xmsmoo.com/upload/simuIcon/20191028170748973931.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="eval-item" >
+            <view class="evalu-tit">服务态度</view>
+            <view class="stars-false">
+                <view class="stars-falseImg" wx:for="{{5}}" bindtap="blackbtp4" data-index="{{index}}">
+                    <image  wx:if="{{index>starNum4}}" src="https://img.xmsmoo.com/upload/simuIcon/20191028165501181710.png"></image>
+                    <image wx:else src="https://img.xmsmoo.com/upload/simuIcon/20191028170748973931.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+<!--    发布评价=========-->
+    <view class="eval-commit">发布评价</view>
+</view>

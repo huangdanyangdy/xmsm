@@ -1,0 +1,39 @@
+<view>
+    <view class="cart-list">
+        <view class="goods-item"wx:for="{{goodsList}}">
+         <!-- wx:for="{{cartlist}}" -->
+            <view class="goods-select" bindtap="OnCartChoose" data-cart-choose="{{item.cartChoose}}" data-index="{{index}}">
+                <image wx:if="{{item.cartChoose}}" src="https://img.xmsmoo.com/upload/4/20191024095159290771.png"></image>
+                <image wx:else src="https://img.xmsmoo.com/upload/4/20191024095212538146.png"></image>
+            </view>
+            <view class="goods-item-right"  >
+                <view class="goods-img"  bindtap="onGoods" data-goods-id="{{item.goodsId}}">
+                    <image src="{{imgurl}}{{item.goodsPic}}"></image>
+                </view>
+                <view class="goods-msg">
+                    <view class="goods-msg-top">
+                        <view class="goods-name text2">{{item.goodsName}}</view>
+                        <!--  -->
+                        <view class="goods-specs-box">
+                            <view class="goods-specs">
+                                <view class="godos-specs-left">
+                                    <view class="goods-specs-left-left">{{item.goodsSkuInfo}}</view>
+                                    <!-- <view class="goods-specs-left-right">深蓝色;</view> -->
+                                </view>
+                                <!-- <view class="goods-specs-right">∨</view> -->
+                            </view>
+                        </view>
+                        <!--  -->
+                    </view>
+                    <view class="goods-price">¥ {{item.goodsPrice}}</view>
+                </view>
+            </view>
+            <view class="goods-btns">
+                <view class="minus" bindtap="OnMinus" data-index="{{index}}" data-cart-id="{{item.cartId}}">-</view>
+                <view class="goods-num">{{item.goodsNum}}</view>
+                <view class="add" bindtap="OnAdd" data-index="{{index}}"  data-cart-id="{{item.cartId}}">+</view>
+            </view>
+        </view>
+    </view>
+
+</view>

@@ -1,0 +1,435 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.3",
+	"appid": "wx142fe522b1040c57",
+	"projectname": "%E5%9B%9B%E7%89%A7%E7%BD%91%E7%BB%9C",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 45,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "orders/pages/order-msg/order-msg",
+					"pathName": "orders/pages/order-msg/order-msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "orders/pages/address/address",
+					"pathName": "orders/pages/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/goodsDetail/goodsDetail",
+					"pathName": "orders/pages/goodsDetail/goodsDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/myOrders/myOrders",
+					"pathName": "orders/pages/myOrders/myOrders",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/fill-eval/fill-eval",
+					"pathName": "orders/pages/fill-eval/fill-eval",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/goodsDetail/goodsDetail",
+					"pathName": "orders/pages/goodsDetail/goodsDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/scanRecord/scanRecord",
+					"pathName": "orders/pages/scanRecord/scanRecord",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "member/pages/member/member",
+					"pathName": "member/pages/member/member",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "member/pages/member-register/member-register",
+					"pathName": "member/pages/member-register/member-register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/refund-money/refund-money",
+					"pathName": "orders/pages/refund-money/refund-money",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/refund-goods/refund-goods",
+					"pathName": "orders/pages/refund-goods/refund-goods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/refund-list/refund-list",
+					"pathName": "orders/pages/refund-list/refund-list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/refund-msg/refund-msg",
+					"pathName": "orders/pages/refund-msg/refund-msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/refund-customer/refund-customer",
+					"pathName": "orders/pages/refund-customer/refund-customer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/refund-logistics/refund-logistics",
+					"pathName": "orders/pages/refund-logistics/refund-logistics",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/refund-recording/refund-recording",
+					"pathName": "orders/pages/refund-recording/refund-recording",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/order-msg/order-msg",
+					"pathName": "orders/pages/order-msg/order-msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "member/pages/member/member",
+					"pathName": "member/pages/member/member",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "member/pages/member/member",
+					"pathName": "member/pages/member/member",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "member/pages/member-register/member-register",
+					"pathName": "member/pages/member-register/member-register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/evalDetail/evalDetail",
+					"pathName": "orders/pages/evalDetail/evalDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shopping-mall/shopping-mall",
+					"pathName": "pages/shopping-mall/shopping-mall",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "events/pages/teamOrder-suc-msg/teamOrder-suc-msg",
+					"pathName": "events/pages/teamOrder-suc-msg/teamOrder-suc-msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "events/pages/team-goods/team-goods",
+					"pathName": "events/pages/team-goods/team-goods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "events/pages/team-state/team-state",
+					"pathName": "events/pages/team-state/team-state",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "events/pages/team-goods-msg/team-goods-msg",
+					"pathName": "events/pages/team-goods-msg/team-goods-msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "events/pages/teamOrder-suc-msg/teamOrder-suc-msg",
+					"pathName": "events/pages/teamOrder-suc-msg/teamOrder-suc-msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods-list/goods-list",
+					"pathName": "pages/goods-list/goods-list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/welcome/welcome",
+					"pathName": "pages/welcome/welcome",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/mine",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shopping-mall/shopping-mall",
+					"pathName": "pages/shopping-mall/shopping-mall",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shopping-mall/shopping-mall",
+					"pathName": "pages/shopping-mall/shopping-mall",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cart/cart",
+					"pathName": "pages/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cart/cart",
+					"pathName": "pages/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/address-list/address-list",
+					"pathName": "orders/pages/address-list/address-list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/address-list/address-list",
+					"pathName": "orders/pages/address-list/address-list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cart/cart",
+					"pathName": "pages/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "member/pages/member-coupon/member-coupon",
+					"pathName": "member/pages/member-coupon/member-coupon",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/address-list/address-list",
+					"pathName": "orders/pages/address-list/address-list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/order-sure/order-sure",
+					"pathName": "orders/pages/order-sure/order-sure",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/myOrders/myOrders",
+					"pathName": "orders/pages/myOrders/myOrders",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/myOrders/myOrders",
+					"pathName": "orders/pages/myOrders/myOrders",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shopping-mall/shopping-mall",
+					"pathName": "pages/shopping-mall/shopping-mall",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods-class/goods-class",
+					"pathName": "pages/goods-class/goods-class",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orders/pages/pay-result/pay-result",
+					"pathName": "orders/pages/pay-result/pay-result",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "events/pages/teamOrder-suc-msg/teamOrder-suc-msg",
+					"pathName": "events/pages/teamOrder-suc-msg/teamOrder-suc-msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "events/pages/team-state/team-state",
+					"pathName": "events/pages/team-state/team-state",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "marketing/pages/seckill/seckill",
+					"pathName": "marketing/pages/seckill/seckill",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "fef",
+					"pathName": "orders/pages/refund-list/refund-list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "marketing/pages/seckill/seckill",
+					"pathName": "marketing/pages/seckill/seckill",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods-class/goods-class",
+					"pathName": "pages/goods-class/goods-class",
+					"scene": null
+				}
+			]
+		}
+	}
+}

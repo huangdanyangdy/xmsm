@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+  
+    },
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "再来一单",
+    "navigationBarTextStyle": "black"
+}

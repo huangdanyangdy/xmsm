@@ -1,0 +1,16 @@
+page {
+    background: #f6f6f6;
+    font-family:PingFang SC;
+    color:#212121;
+}
+
+.wrap {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 30rpx;
+}
+.contents{
+  width: 100%;
+  box-sizing: border-box;
+}

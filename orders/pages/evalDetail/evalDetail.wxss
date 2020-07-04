@@ -1,0 +1,287 @@
+
+page{
+    background: #F2F2F2;
+}
+.wrap {
+  position: relative;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.evalWrap{
+
+    font-family:PingFang SC;
+    padding-bottom:110rpx;
+      width: 100%;
+    box-sizing: border-box;
+    /* position: relative; */
+}
+.comment-cont{
+    background:#fff;
+    padding:40rpx 20rpx;
+     padding-bottom:20rpx;
+    margin-bottom:20rpx;
+    box-sizing: border-box;
+}
+.comment-cont-mid{
+    background:#fff;
+    padding:30rpx 20rpx;
+    margin-bottom:20rpx;
+    box-sizing: border-box;
+}
+.comment-member-item{
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20rpx;
+}
+.comment-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30rpx;
+}
+.comment-header-com{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.comment-left-icon{
+    width:4rpx;
+    height:30rpx;
+    background:rgba(255,68,57,1);
+    margin-right: 10rpx;
+}
+.comment-left-tit{
+    font-size:30rpx;
+    font-weight:bold;
+    margin-right: 10rpx;
+}
+.comment-left-num{
+    font-size:24rpx;
+    color: #777;
+}
+.comment-good{
+    font-size:24rpx;
+    font-family:PingFang SC;
+    color:#777;
+}
+.comment-percent{
+    font-size:24rpx;
+    color:#FF4439;
+}
+.comment-num-wrap{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding-bottom: 10rpx; */
+    box-sizing: border-box;
+    flex-flow: wrap;
+}
+.comment-num-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#ffe3e1;
+    border-radius:5rpx;
+    font-size:24rpx;
+    font-family:PingFang SC;
+    color:#777;
+    padding: 13rpx 18rpx;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.comment-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform:scaleX(1.5); */
+    color:#7B7B7B;
+    box-sizing: border-box;
+
+}
+/*评价*/
+.comment-member-com{
+    width:100%;
+    flex:1;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 30rpx;
+}
+.comment-member-left{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.comment-member-header{
+    width:70rpx;
+    height:70rpx;
+    background:rgba(248,248,248,1);
+    border-radius:50%;
+    overflow: hidden;
+}
+.comment-member-header image{
+    width:70rpx;
+    height:70rpx;
+}
+.comment-member-info{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 10rpx;
+}
+.comment-member-name{
+    font-size:26rpx;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:#212121;
+    margin-bottom: 10rpx;
+}
+.comment-level-box{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.comment-member-level{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width:17rpx;
+    height:17rpx;
+    margin-right:6rpx;
+}
+.comment-member-level image{
+    width:17rpx;
+    height:17rpx;
+}
+.comment-member-right{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size:22rpx;
+    font-family:PingFang SC;
+    color:#777;
+}
+.comment-member-content{
+    font-size:26rpx;
+    font-family:PingFang SC;
+    color:#212121;
+    line-height:34rpx;
+    margin-bottom: 20rpx;
+}
+.comment-goodsImg-box{
+  /* width: 710rpx; */
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:20rpx;/* 设置元素间距 */
+    /* margin-bottom: 30rpx; */
+    box-sizing: border-box;
+}
+.comment-goods-img{
+    flex:0 0 auto;
+    width:224rpx;
+    height:224rpx;
+    border-radius:5rpx;
+    /* margin-right: 13rpx; */
+    /* margin-bottom:20rpx; */
+}
+/* .comment-goods-img:last-of-type{
+    margin-right: 0rpx;
+} */
+.comment-goods-img image{
+    width:224rpx;
+    height:224rpx;
+}
+.comment-all{
+    width:170rpx;
+    font-size:24rpx;
+    font-family:PingFang SC;
+    color: #212121;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding:13rpx;
+    border:1px solid rgba(35,24,21,1);
+    border-radius:10rpx;
+    margin: 0 auto;
+}
+.comment-goodsSpec{
+  font-size:22rpx;
+  color:#B5B5B5;
+  padding: 30rpx 0;
+}
+/*加入购物车============================*/
+.goodsDet-footer{
+    width:750rpx;
+    height:100rpx;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 5rpx 21rpx 0rpx rgba(6,0,1,0.14);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24rpx 20rpx;
+    box-sizing: border-box;
+}
+.goods-collect{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.goods-collect>button{
+  background-color:none;
+}
+button::after{
+  border:none;
+}
+.button-hover{
+  background:none;
+}
+button{
+    padding: 0;
+    font-size: inherit;
+    line-height: normal;
+  background:none;
+}
+.collectImg,.collectImg image{
+    width:34rpx;
+    height:34rpx;
+}
+.collectTxt{
+    margin-top: 5rpx;
+    font-size:24rpx;
+}
+.collectTxt-active{
+    color:#FF4439;
+}
+.goodsSelec{
+    font-size:26rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:380rpx;
+    height:62rpx;
+    border-radius: 50rpx;
+    border:1px solid #FF4439;
+}
+.goodsAdd{
+    flex:1;
+    height: 100%;
+    color:rgba(255,68,57,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goodsBuy{
+    height: 100%;
+    border-top-right-radius:50rpx ;
+    border-bottom-right-radius:50rpx ;
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    background:linear-gradient(-90deg,rgba(255,68,57,1) 0%,rgba(255,64,26,1) 100%);
+}

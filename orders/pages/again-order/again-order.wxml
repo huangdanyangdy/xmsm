@@ -1,0 +1,67 @@
+<view class="wrap">
+	<view class="top">
+		<view class="address">
+			<view class="address-left">
+				<view class="address-img">
+					<image src="https://img.xmsmoo.com/upload/simu/20191028101351767013.png"></image>
+				</view>
+				<view class="address-msg text1">福建省厦门市湖里区</view>
+			</view>
+			<view class="address-right">
+				<view class="address-btn">分享</view>
+					<view class="address-btn">编辑</view>
+			</view>
+		</view>
+	</view>
+	<view class="contents">
+		<view class="cart-list">
+			<view class="goods-item" wx:for="{{goods}}">
+				<view class="goods-select">
+					<image wx:if="{{true}}" src="https://img.xmsmoo.com/upload/4/20191024095159290771.png"></image>
+					<image wx:else src="https://img.xmsmoo.com/upload/4/20191024095212538146.png"></image>
+				</view>
+				<view class="goods-item-right">
+					<view class="goods-img">
+						<image src="https://img.xmsmoo.com/upload/4/20191023151059503959.png"></image>
+					</view>
+					<view class="goods-msg">
+						<view class="goods-msg-top">
+							<view class="goods-name text2">合适的借口附件是独立开发尽快弄好就少得可怜后即可就会收到客人解放螺丝扣讲开了讲开了讲开了解开了解开了讲开了</view>
+							<!--  -->
+							<view class="goods-specs-box">
+								<view class="goods-specs">
+									<view class="godos-specs-left">
+										<view class="goods-specs-left-left">颜色分类:</view>
+										<view class="goods-specs-left-right">深蓝色;</view>
+									</view>
+									<view class="goods-specs-right">∨</view>
+								</view>
+							</view>
+							<!--  -->
+						</view>
+						<view class="goods-price">¥ {{item.price}}</view>
+					</view>
+				</view>
+				<view class="goods-btns">
+					<view class="minus" bindtap="OnMinus" data-index="{{index}}">-</view>
+					<view class="goods-num">{{item.goodsNum}}</view>
+					<view class="add" bindtap="OnAdd" data-index="{{index}}">+</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="footer">
+		<view class="footer-left">
+			
+		</view>
+		<view class="footer-right">
+			<view class="goods-total">
+				<view class="goods-nums">共2件,</view>
+				<view class="goods-total-title">合计</view>
+				<view class="goods-prices">¥ 33.33</view>
+			</view>
+			<view class="cart-btn">去结算</view>
+		</view>
+		
+	</view>
+</view>

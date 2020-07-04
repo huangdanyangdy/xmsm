@@ -1,0 +1,70 @@
+<view>
+    <view class="nav-headers">
+        <view class="nav-list" >
+            <view class="nav-items {{status==index? 'nav-items-active':''}}" data-status="{{item.status}}"
+data-index="{{index}}"
+                  bindtap="changeOrders" wx:for="{{orderStatus}}">{{item.orderName}}</view>
+        </view>
+    </view>
+<!--    订单列表=======-->
+    <view  wx:for="{{orderslist}}" wx:for-item="item" wx:for-index="orderslistIndex"  wx:if="{{status==orderslistIndex}}">
+        <view class="orderList" wx:for="{{item}}"  wx:for-item="ordersList">
+            <view class="orderList-header" >
+                <view class="goods-detail">商品详情</view>
+                <view class="trade-status">{{ordersList.ordersStateValue}}</view>
+            </view>
+            <view class="goods-list"   bindtap="toOrderMsg" data-orders-id="{{ordersList.ordersId}}">
+                <view class="goods-item"  wx:for="{{ordersList.ordersGoodsList}}"
+                      wx:for-item="orderGoodsItem" data-ordersState="{{orderGoodsItem.orderStatus}}">
+                    <view class="goods-img">
+                        <image src="{{imgurl}}{{orderGoodsItem.goodsPic}}"></image>
+                    </view>
+                    <view class="goods-item-right">
+                        <view class="goods-item-right-top">
+                            <view class="goods-name text2">{{orderGoodsItem.goodsName}}</view>
+                            <view class="goods-specs">
+                                <view class="goods-specs-class text1">{{orderGoodsItem.goodsSkuInfo}}</view>
+                                <!-- <view class="goods-specs-name">深蓝色;</view> -->
+                            </view>
+                        </view>
+                        <view class="goods-item-right-bottom">
+                            <view class="goods-price">¥{{orderGoodsItem.goodsPrice}}</view>
+                            <view class="goods-num">×{{orderGoodsItem.goodsNum}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="order-total">共{{ordersList.goodsNums}}件，合计￥{{ordersList.ordersActuallyAmount}}</view>
+            <view class="orderList-footer" wx:if="{{ordersList.ordersState!='0'}}">
+                <view class="orderList-btn" bindtap="onCancelOrder" data-orders-id="{{ordersList.ordersId}}"  wx:if="{{ordersList.ordersState=='10'}}">取消订单</view>
+                <view class="orderList-btn orderList-btn-active" wx:if="{{ordersList.ordersState=='10'}}">付款 </view>
+                <!-- <view class="orderList-btn" wx:if="{{ordersList.ordersState=='20'||ordersList.ordersState=='30'}}">查看物流</view> -->
+                <view class="orderList-btn orderList-btn-active" wx:if="{{ordersList.ordersState=='30'}}" bindtap="OnReceive">确认收获 </view>
+                <view class="orderList-btn" wx:if="{{ordersList.ordersState=='40'}}">再来一单</view>
+                <view class="orderList-btn orderList-btn-active" wx:if="{{ordersList.ordersState=='40'}}">评价 </view>
+            </view>
+        </view>
+
+
+    </view>
+    	<view class="conpons-box" wx:if="{{CancelOrder}}">
+		<view class="screen" bindtap="onCancelOrder"></view>
+		<view class="conpons">
+			<view class="conpons-top">取消订单</view>
+			<view class="conpons-list">
+				<view class="conpons-item" wx:for="{{refundReason}}" wx:for-index="reasonIndex" bindtap="selectReason" data-index="{{reasonIndex}}" data-reason="{{item.reason}}">
+					<view class="conpons-item-left text1">{{item.reason}}</view>
+					<view class="conpons-item-right">
+						<image wx:if="{{reasonNum==reasonIndex}}" src="https://img.xmsmoo.com/upload/4/20191024095159290771.png"></image>
+						<image wx:else src="https://img.xmsmoo.com/upload/4/20191024095212538146.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="conpons-btns">
+				<view class="conpons-btn conpons-btn-left" bindtap="onCancelOrder">暂不取消</view>
+				<view class="conpons-btn " bindtap="comfirmCancel" >确认取消</view>
+			</view>
+		</view>
+	</view>
+
+</view>

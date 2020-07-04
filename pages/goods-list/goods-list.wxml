@@ -1,0 +1,131 @@
+<view class="wrap"> 
+  <view class="top">
+    <view class="top-search"  bindtap="oninput">
+      <view class="search-img">
+          <image class="" src="https://img.xmsmoo.com/upload/simuIcon/20191021161047344580.png"></image>
+      </view>
+      <input type="text" placeholder="搜索关键字" disabled="true"/>
+    </view>
+  </view>
+    <view class="contents">
+      <!--  -->
+      <view class="filter-box">
+        <view class="filter-list">
+          <!-- <view class="{{filterNum==0?'filter-item-active':'filter-item'}}" bindtap="onFilter" data-index="0">综合</view> -->
+           <view class="{{filterNum==1?'filter-item-active':'filter-item'}}" bindtap="onFilter" data-index="1">价格</view>
+           <view class="{{filterNum==2?'filter-item-active':'filter-item'}}" bindtap="onSales" data-index="2">销量</view>
+             <view class="filter-img"  bindtap="onlayout">
+                <image  wx:if="{{layout}}" class="" src="https://img.xmsmoo.com/upload/4/20191022180019591542.png"></image>
+                 <image  wx:else class="" src="https://img.xmsmoo.com/upload/4/20191022182037313961.png"></image>   
+            </view> 
+        </view>
+        <view class="filter-right"  bindtap="showToast">
+<!--          bindtap="selectGoods"-->
+          <view class="filter-right-name">筛选</view>
+           <view class="filter-right-img">
+              <image class="" src="https://img.xmsmoo.com/upload/4/20191022180034283677.png"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 双个排版 -->
+      <view class="goods-list" wx:if="{{layout}}">
+        <!--  -->
+        <view class="goods-item" wx:for="{{content}}"  wx:for-item="content"  bindtap="onGoods" data-goods-id="{{content.goodsId}}">
+          <view class="goods-img">
+            <image class="" src="{{imgurl}}{{content.goodsPic}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+          </view>
+          <view class="goods-msg">
+            <view class="goods-name text1">{{content.goodsName}}</view>
+            <view class="goods-offers">
+              <view class="goods-offers-msg text1">{{content.goodsPromotions}}</view>
+            </view>
+            <!-- <view class="goods-offers">
+              <view class="goods-offers-item">{{content.goodsPromotions}}</view>
+              <view class="goods-offers-item">满39减5</view>
+            </view> -->
+            <view class="goods-prices">
+                <view class="goods-prices-left">
+                  <view class="goods-price-now text1">
+                    <P>¥</P>
+                    <P>{{content.goodsPrice}}</P>
+                   </view>
+                   <view class="goods-price-old">
+                    ¥{{content.goodsOriginalPrice}}
+                  </view>
+                </view>
+                <view class="goods-prices-right">...</view>
+            </view>
+          </view>
+        </view>
+        
+        <!--  -->
+      </view>
+      <!-- 单个排版 -->
+      <view class="goods-list1"  wx:if="{{!layout}}">
+        <!--  -->
+        <view class="goods-item1" wx:for="{{content}}" wx:for-item="content" bindtap="onGoods" data-goods-id="{{content.goodsId}}">
+          <view class="goods-img1">
+            <image class="" src="{{imgurl}}{{content.goodsPic}}"> </image>
+          </view>
+          <view class="goods-item1-right">
+            <view class="goods-name1 text2">{{content.goodsName}}</view>
+            <view class="goods-item1-right-bottom">
+            <view class="goods-offers">
+              <view class="goods-offers-msg text1">{{content.goodsPromotions}}</view>
+            </view>
+              <!-- <view class="goods-offers1 goods-offers">
+                  <view class="goods-offers1-item goods-offers-item">满39减5</view>
+              </view> -->
+              <view class="goods-prices">
+                <view class="goods-prices-left">
+                  <view class="goods-price-now text1">
+                    <P>¥</P>
+                    <P>{{content.goodsPrice}}</P>
+                   </view>
+                   <view class="goods-price-old"> ¥{{content.goodsOriginalPrice}}</view>
+                </view>
+                <view class="goods-prices-right">...</view>
+            </view>
+            </view>
+          </view>
+        </view>
+        <!--  -->
+      </view>
+    </view>
+    <!-- 筛选弹窗 -->
+    <view class="toast-box" wx:if="{{sortToast}}">
+      <view class="mask" bindtap="showToast"></view>
+      <view class="toast">
+        <view class="toast-title">筛选</view>
+<!--        <view class="blank-color"></view>-->
+        <view class="sort-middle">
+          <view class="price-wrap">
+            <view class="price-txt">价格区间（元）</view>
+            <view class="input-wrap">
+              <view class="input-box">
+                <input type="number" placeholder="最低价" />
+              </view>
+              <view class="input-line"></view>
+              <view class="input-box">
+                <input type="number" placeholder="最高价" />
+              </view>
+            </view>
+          </view>
+          <view class="delivery">包邮 <checkbox color="#FD4401"  checked="true"></checkbox></view>
+          <view class="sort-list">
+            <view class="sort-tit">毛巾材质</view>
+            <view class="sort-content">
+              <view class="sort-content-items" wx:for="{{20}}">聚氨酯</view>
+            </view>
+          </view>
+        </view>
+        <view class="toast-bottom-wrap">
+          <view class="toast-bottom">
+            <view class="reset">重置</view>
+            <view class="submit">确定</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+</view>

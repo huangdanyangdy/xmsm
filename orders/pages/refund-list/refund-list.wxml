@@ -1,0 +1,87 @@
+<view class="wrap">
+  <view class="top-status">
+    <view class="top-status-tit {{chooseStatus==0?'top-status-active':''}}" data-status="0" bindtap="changeStatus">仅退款</view>
+    <view class="top-status-tit {{chooseStatus==1?'top-status-active':''}}" data-status="1" bindtap="changeStatus">退货退款</view>
+  </view>
+  <view class="contents">
+    <view class="refund-list" wx:if="{{chooseStatus==0}}">
+      <!-- 仅退款 -->
+      <view class="refund-item" wx:for="{{ordersList}}" wx:for-item="ordersList">
+        <view class="refund-item-top">商品详情</view>
+        <view class="goods-list">
+          <view class="goods-item">
+            <view class="goods-img">
+              <image src="{{imgurl}}{{ordersList.goodsPic}}"></image>
+            </view>
+            <view class="goods-item-right">
+              <view class="goods-item-right-top">
+                <view class="goods-name text2">{{ordersList.goodsName}}</view>
+                <view class="goods-specs">
+                  <view class="goods-specs-class text1">{{ordersList.goodsSkuInfo}}</view>
+                  <!-- <view class="goods-specs-name">深蓝色;</view> -->
+                </view>
+              </view>
+              <view class="goods-item-right-bottom">
+                <view class="goods-price">¥{{ordersList.goodsPrice}}</view>
+                <view class="goods-num">×{{ordersList.goodsNum}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="refund-item-star">
+          <view class="refund-item-star-left">
+            <view class="reftund-item-img">
+              <image src="https://img.xmsmoo.com/upload/simu/20191028162310041481.png"></image>
+            </view>
+            <view class="reftund-item-img-title" wx:if="{{ordersList.returnState==0}}">仅退款</view>
+            <view class="reftund-item-img-title" wx:if="{{ordersList.returnState!=0}}">退货退款</view>
+          </view>
+          <view class="refund-item-star-right text2" wx:if="{{ordersList.ordersRefundState==10}}">等待商家处理退款申请，还剩下6天23小时56分钟</view>
+          <view class="refund-item-star-right text2" wx:if="{{ordersList.ordersRefundState==20}}">同意</view>
+          <view class="refund-item-star-right text2" wx:if="{{ordersList.ordersRefundState==30}}">拒绝</view>
+          <view class="refund-item-star-right text2" wx:if="{{ordersList.ordersRefundState==40}}">关闭</view>
+        </view>
+        <view class="refund-btns" data-orders-id="{{ordersList.ordersId}}" bindtap="toRefundDetail">
+          <view class="refund-btn">查看详情</view>
+        </view>
+      </view>
+      <!--退货退款  -->
+      <view class="refund-item">
+        <view class="refund-item-top">商品详情</view>
+        <view class="goods-list">
+          <view class="goods-item">
+            <view class="goods-img">
+              <image src="https://img.xmsmoo.com/upload/4/20191023151059503959.png"></image>
+            </view>
+            <view class="goods-item-right">
+              <view class="goods-item-right-top">
+                <view class="goods-name text2">时日朝歌时蜂鸣器时蜂鸣器歌时蜂鸣时蜂鸣器歌时蜂鸣时蜂鸣器歌时蜂鸣歌时蜂鸣歌时蜂鸣歌时蜂鸣歌时蜂鸣吕</view>
+                <view class="goods-specs">
+                  <view class="goods-specs-class">颜色分类:</view>
+                  <view class="goods-specs-name">深蓝色;</view>
+                </view>
+              </view>
+              <view class="goods-item-right-bottom">
+                <view class="goods-price">¥33</view>
+                <view class="goods-num">×1</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="refund-item-star">
+          <view class="refund-item-star-left">
+            <view class="reftund-item-img">
+              <image src="https://img.xmsmoo.com/upload/simu/20191028163745581582.png"></image>
+            </view>
+            <view class="reftund-item-img-title">退货退款</view>
+          </view>
+          <view class="refund-item-star-right text2">等待商家处理退款申请，还剩下6天23小时56分钟</view>
+        </view>
+        <view class="refund-btns">
+          <view class="refund-btn">查看详情</view>
+        </view>
+      </view>
+      <!--  -->
+    </view>
+  </view>
+</view>

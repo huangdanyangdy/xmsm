@@ -1,0 +1,47 @@
+<view class="wrap">
+  <view class="top"></view>
+  <view class="contents">
+    <!-- <view class="address-import" bindtap="OnaddressImport">
+    <view class="address-img">
+      <image class="" src="https://img.xmsmoo.com/upload/4/20191024105702999326.png"></image>
+    </view>
+    <view class="address-title">
+      一键导入微信地址
+    </view>
+    </view> -->
+    <view class="form-box">
+      <form action="" report-submit="{{ture}}"   bindsubmit="formfubmit">
+        <view class="form-item">
+          <view class="form-left">收货人</view>
+           <view class="form-right">
+              <input type="text" placeholder="请填写姓名" value="{{name}}" bindinput="OnName"/>
+           </view>
+        </view>
+        <view class="form-item">
+          <view class="form-left">联系电话</view>
+           <view class="form-right">
+              <input type="number" placeholder="请填写联系电话" maxlength="11" value="{{phone}}" bindinput="Onphone"/>
+           </view>
+        </view>
+         <view class="form-item">
+          <view class="form-left">配送地址</view>
+           <picker mode="region" class="form-right form-right-region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+              <input class="picker-region" placeholder="请选择省,市,区" value="{{region}}" disabled="{{true}}"></input>
+           </picker>
+        </view>
+        <view class="form-text">
+            <input type="text" placeholder="请填写详细地址(街道,楼牌号等)" value="{{address}}" bindinput="Onaddress"/>
+        </view>
+        <view class="form-switch">
+          <view class="form-switch-left">设为默认地址</view>
+        <view class="form-switch-right">
+            <switch class="" checked="{{switchstart}}" type="switch" bindchange="OnSwitch" color="#f03a2f"></switch>
+       </view>
+        </view>
+        <view class="form-btn">
+          <button form-type="submit" bindtap="Ondone">完成</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

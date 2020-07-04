@@ -1,0 +1,78 @@
+<view class="wrap">
+	<view class="contents">
+		<view class="top">
+			<view class="events">
+				<view class="events-top">
+					<view class="events-top-title">99.9超值团</view>
+					<view class="events-top-time">
+						<view class="time-item">12</view>
+						<view class="time-icon">:</view>
+						<view class="time-item">23</view>
+						<view class="time-icon">:</view>
+						<view class="time-item">12</view>
+						<view class="time-icon">:</view>
+						<view class="time-item">12</view>
+					</view>
+				</view>
+				<!--  -->
+				<view class="events-lsit">
+					<view class="events-item" wx:for="{{4}}">
+						<view class="events-goods-img">
+							<image src="https://img.xmsmoo.com/upload/4/20191031101901470999.png"></image>
+						</view>
+						<view class="events-goods-name text2">附件是快乐是快乐附件是快乐附件是快乐附件附件是肯定黄</view>
+						<view class="events-goods-prices">
+							<p>¥</p>
+							<p>32.22</p>
+						</view>
+					</view>
+				</view>
+				<!--  -->
+			</view>
+		</view>
+		<view class="seconds">
+			<view class="seconds-top">
+				<view class="seconds-top-itme" wx:for="{{5}}">
+					<view class="seconds-top-time">9:00</view>
+					<view class="seconds-top-title">抢购中</view>
+				</view>
+			</view>
+			<view class="seconds-box">
+				<view class="seconds-box-top">
+					<view class="seconds-box-top-left">3折热卖团</view>
+					<view class="seconds-box-top-right">限时特价，抢完即止</view>
+				</view>
+				<view class="seconds-list">
+					<view class="seconds-item" wx:for="{{5}}">
+						<view class="seconds-goods-img">
+							<image src="https://img.xmsmoo.com/upload/4/20191031101901470999.png"></image>
+						</view>
+						<view class="seconds-item-right">
+							<view class="seconds-goods-name text2">时日烦死合计胆汁就发生了打开房间里的思考飞机迪斯科浪费就是可能</view>
+							<view class="second-right-bottom">
+								<view class="second-snapped-nums">
+									
+									<progress percent="20" border-radius="10rpx" stroke-width="25rpx" activeColor="#FF4800" backgroundColor="#F999899">
+										<view class="snapped-nums">已抢300件</view>
+										<view class="snapped-percentage">30%</view>
+									</progress>
+									
+								</view>
+								<view class="second-preces">
+									<view class="second-price">
+										<view class="second-price-new">
+											<p>¥</p>
+											<p>33</p>
+										</view>
+										<view class="second-price-old">¥843</view>
+									</view>
+									<view class="second-btn">立即抢</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,144 @@
+page {
+	background: #f2f2f2;
+}
+.wrap {
+	width: 100%;
+	box-sizing: border-box;
+}
+.contents {
+	width: 100%;
+	box-sizing: border-box;
+}
+/*  */
+.goods-list {
+	padding: 40rpx 20rpx;
+	width: 100%;
+	box-sizing: border-box;
+	 background: #ffffff;
+}
+.goods-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30rpx;
+	width: 100%;
+	height: 180rpx;
+	box-sizing: border-box;
+  line-height: 1;
+ 
+}
+.goods-list>.goods-item:last-of-type{
+	margin: 0;
+}
+.goods-img {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	width: 180rpx;
+	height: 180rpx;
+	border-radius: 10rpx;
+}
+.goods-img image {
+	width: 180rpx;
+	height: 180rpx;
+}
+.goods-item-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1;
+	height: 100%;
+	margin-left: 20rpx;
+	box-sizing: border-box;
+}
+.goods-item-right-top {
+	width: 100%;
+	box-sizing: border-box;
+}
+.goods-specs {
+	display: flex;
+	align-items: center;
+}
+.goods-name {
+	font-size: 28rpx;
+	margin-bottom: 10rpx;
+  line-height: 34rpx;
+  font-weight: 500;
+}
+.goods-specs {
+	font-size: 26rpx;
+	color: #777777;
+	
+}
+.goods-item-right-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    line-height: 1;
+}
+.goods-price {
+	font-size: 28rpx;
+	font-weight: 800;
+
+}
+.goods-num {
+	font-size: 26rpx;
+	color: #777777;
+}
+/*  */
+.service{
+	margin-top: 20rpx;
+	width: 100%;
+	box-sizing: border-box;
+	background: #ffffff;
+}
+.service-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 38rpx;
+	height: 34rpx;
+}
+.service-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 25rpx 20rpx;
+	height: 130rpx;
+	width: 100%;
+	border-bottom: 1px solid #F2F2F2;
+	box-sizing: border-box;
+}
+.service-item-left {
+	display: flex;
+}
+.service-msg {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 15rpx;
+	height: 100%;
+	box-sizing: border-box;
+}
+.service-img image {
+	width: 38rpx;
+	height: 34rpx;
+}
+.service-name{
+	line-height: 1;
+	margin-bottom: 13rpx;
+	font-size: 30rpx;
+	font-weight: 500;
+}
+.service-item-right {
+	 font-size: 30rpx;
+	transform-origin:right 20rpx ;
+	transform: scaleY(1.5);
+	color:#777;
+	font-weight: 200;
+}
+.service-title {
+	font-size: 28rpx;
+	color: #777777;
+}

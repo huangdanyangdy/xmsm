@@ -1,0 +1,57 @@
+<view class="wrap">
+	<view class="top">
+		<view class="points-box">
+			<view class="points-usable">{{member.memberPoints}}</view>
+			<view class="points-usable-title">当前可用积分</view>
+		</view>
+		<view class="points-msg">
+			<view class="points-msg-item">
+				<view class="points-fatch">344</view>
+				<view class="points-msg-item-bottom">
+					<view class="points-msg-img">
+						<image src="https://img.xmsmoo.com/upload/4/20191030093732263294.png"></image>
+					</view>
+					<view class="points-msg-title">获取积分</view>
+				</view>
+			</view>
+			<view class="points-msg-item">
+				<view class="points-fatch">{{member.memberPointsMinus}}</view>
+				<view class="points-msg-item-bottom">
+					<view class="points-msg-img">
+						<image src="https://img.xmsmoo.com/upload/4/20191030100555824887.png"></image>
+					</view>
+					<view class="points-msg-title">消费积分</view>
+				</view>
+			</view>
+			<view class="points-msg-item">
+				<view class="points-fatch">{{member.memberMoneyMinus}}</view>
+				<view class="points-msg-item-bottom">
+					<view class="points-msg-img">
+						<image src="https://img.xmsmoo.com/upload/4/20191030100617545136.png"></image>
+					</view>
+					<view class="points-msg-title">消费金额</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="contents">
+		<view class="points">
+			<view class="points-top">积分明细</view>
+			<view class="points-list">
+				<view class="points-item" wx:for="{{4}}">
+					<view class="points-item-img">
+						<image src="https://img.xmsmoo.com/upload/4/20191030102224530386.png"></image>
+					</view>
+					<view class="points-item-right">
+						<view class="points-item-right-left">
+							<view class="points-title">每日签到</view>
+							<view class="points-time">2019-03-29 09:57:30</view>
+						</view>
+						<view class="points-item-right-left">+50</view>
+					</view>
+					
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,55 @@
+<view>
+    <view class="coupon-navbar">
+        <view class="nav-use {{index=='0'?'nav-use-active':''}} " data-index="0"  bindtap="changeCoupon">可使用</view>
+        <view class="nav-use {{index=='1'?'nav-use-active':''}}" data-index="1" bindtap="changeCoupon">已使用</view>
+        <view class="nav-use {{index=='2'?'nav-use-active':''}}" data-index="2" bindtap="changeCoupon">已过期</view>
+    </view>
+    <view class="coupon-box" wx:for="{{memberCoupon}}" wx:for-index="couponIndex" wx:for-item="coupon" wx:if="{{index==couponIndex}}">
+        <view class="couponUse " wx:if="{{item.couponState=='use'}}" wx:for="{{coupon}}">
+            <view class="couponUse-left">
+                <view class="couponUse-leftTop">
+                    <view class="couponUse-icon">￥</view>
+                    <view  class="couponUse-worth">{{item.couponPrice}}</view>
+                    <view  class="couponUse-txt">店铺优惠券</view>
+                </view>
+                <view class="couponUse-for">{{item.couponSubTitle}}</view>
+                <view class="couponUse-for">有效期{{item.couponExpiryTimeFormat}}</view>
+            </view>
+                <view class="couponUse-right" bindtap="toUseCoupon">立即使用</view>
+        </view>
+
+        <view class="couponUsed " wx:if="{{item.couponState=='used'}}" wx:for="{{coupon}}">
+            <view class="couponUse-left">
+                <view class="couponUse-leftTop">
+                    <view class="couponUse-icon">￥</view>
+                    <view  class="couponUse-worth">{{item.couponPrice}}</view>
+                    <view  class="couponUse-txt">店铺优惠券</view>
+                </view>
+                <view class="couponUse-for">{{item.couponSubTitle}}</view>
+                <view class="couponUse-for">有效期{{item.couponExpiryTimeFormat}}</view>
+            </view>
+            <view class="couponUse-right" >已使用</view>
+        </view>
+
+        <view class="couponPass " wx:if="{{item.couponState=='pass'}}" wx:for="{{coupon}}">
+            <view class="couponUse-left">
+                <view class="couponUse-leftTop">
+                    <view class="couponUse-icon">￥</view>
+                    <view  class="couponUse-worth">{{item.couponPrice}}</view>
+                    <view  class="couponUse-txt">店铺优惠券</view>
+                </view>
+                <view class="couponUse-for">{{item.couponSubTitle}}</view>
+                <view class="couponUse-for">有效期{{item.couponExpiryTimeFormat}}</view>
+            </view>
+<!--            <view class="couponUse-right"  >立即使用</view>-->
+<!--            <view class="couponUse-right" >已使用</view>-->
+            <view class="couponUse-right" >已过期</view>
+        </view>
+
+
+
+    </view>
+
+
+
+</view>

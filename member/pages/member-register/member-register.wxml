@@ -1,0 +1,96 @@
+<!--    顶部会员信息=========-->
+<view class="mine-top">
+    <view class="nav-top">
+        <view class="nav-topLeft">
+            <view class="nav-memberImg"><image src="{{member.memberHeadimgurl}}"></image></view>
+            <view class="nav-infoBox">
+                <view class="nav-memName">
+                    <view class="nav-vipName text1">{{member.memberNickname}}</view>
+                </view>
+                <view class="nav-vipId">{{member.memberLevelName}}</view>
+            </view>
+        </view>
+        <view class="nav-topRight">
+            <view class="member-central" bindtap="toMemberPoints">积分{{member.memberPoints}}</view>
+        </view>
+    </view>
+</view>
+<!--点击签到===============-->
+<view class="register-cont">
+    <view class="cont-top">
+        <view class="top-date">25</view>
+        <view class="top-wrap">
+            <view class="top-week">周五</view>
+            <view class="month-year">十月  2019</view>
+        </view>
+        <view class="gift-img"><image src="https://img.xmsmoo.com/upload/simuIcon/20191030092836541475.png"></image></view>
+    </view>
+<!--    签到进度===========-->
+    <view class="register-pro" >
+        <view class="pro-box" wx:for="{{7}}">
+            <view class="pro-mark">+5</view>
+            <view class="pro-img" >
+                <image src="https://img.xmsmoo.com/upload/simuIcon/20191030092918111986.png"></image>
+<!--                <image src="https://img.xmsmoo.com/upload/simuIcon/20191030092955439216.png"></image>-->
+            </view>
+            <view class="pro-mark">已领取</view>
+        </view>
+    </view>
+    <view class="btn-box">
+        <view class="register-btn">点击签到</view>
+    </view>
+
+</view>
+<!--今日任务================-->
+<view class="task-cont">
+    <view class="task">今日任务</view>
+    <view class="task-item">
+        <view class="item-left">
+            <view class="left-img"><image src="https://img.xmsmoo.com/upload/simuIcon/20191030093642382735.png"></image></view>
+            <view class="left-cont">
+                <view class="cont-task">邀请一位好友 </view>
+                <view class="cont-mark">
+                   <text class="cont-mark-mark">+20 </text> 积分
+                </view>
+            </view>
+        </view>
+        <view class="todo">去邀请</view>
+    </view>
+    <view class="task-item">
+        <view class="item-left">
+            <view class="left-img"><image src="https://img.xmsmoo.com/upload/simuIcon/20191030093701438525.png"></image></view>
+            <view class="left-cont">
+                <view class="cont-task">
+                    绑定银行卡
+                </view>
+                <view class="cont-mark">
+                    <text class="cont-mark-mark">+30 </text> 积分
+                </view>
+            </view>
+        </view>
+        <view class="todo">去完成</view>
+    </view>
+</view>
+<!--积分抽奖=========-->
+<view class="mark-draw">积分抽奖</view>
+<view class="draw-img">
+    <image src="https://img.xmsmoo.com/upload/simuIcon/20191030092440966881.png"></image>
+</view>
+
+<!--  -->
+<view class="sign-box" wx:if="{{false}}">
+  <view class="screen"></view>
+  <view class="sign">
+    <view class="sign-top">
+      <view class="sign-top-top">
+        <view class="sign-top-top-left">+10</view>
+         <view class="sign-top-top-right">积分</view>
+      </view>
+        <view class="sign-top-bottom">还差50积分就可获得1枚勋章哦</view>
+    </view>
+    <view class="sign-btn">确定</view>
+    <view class="sign-del-img">
+        <image src="https://img.xmsmoo.com/upload/4/20191030160910105706.png"></image>
+    </view>
+  </view>
+</view>

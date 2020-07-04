@@ -1,0 +1,76 @@
+/* pages/paySuccess/paySuccess.wxss */
+page{
+    background: #F2F2F2;
+}
+.payWrap{
+    font-family:PingFang SC;
+    background: #fff;
+
+}
+.paySuccessCotain{
+    padding-top:50rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+}
+.paySucIcon{
+    width:120rpx;
+    height:120rpx;
+}
+.paySucInfo{
+    margin-top: 40rpx;
+    margin-bottom: 30rpx;
+    font-size: 28rpx;
+    color:#212121;
+}
+.payTotal{
+    font-size:36rpx;
+    color:#FF443A;
+    padding-bottom:40rpx;
+}
+.payWay{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:90rpx;
+    padding:30rpx;
+    font-size:28rpx;
+    color: #777;
+    box-sizing: border-box;
+}
+/*            */
+
+.paySuccessBottom{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70rpx;
+}
+.seeOrder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:210rpx;
+    height:90rpx;
+    border-radius:5rpx;
+    font-size:28rpx;
+    color:#212121;
+    background: #fff;
+}
+.seeOrder-active{
+    background: #FF443A;
+    color:#fff;
+}
+.payCoupon{
+    border-radius:10rpx;
+    overflow: hidden;
+    width:710rpx;
+    height:175rpx;
+    margin: 0 auto;
+    margin-top: 70rpx;
+}
+.payCoupon image{
+    width:710rpx;
+    height:175rpx;
+}

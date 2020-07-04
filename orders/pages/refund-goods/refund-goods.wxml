@@ -1,0 +1,111 @@
+<view class="wrap">
+	<view class="contents">
+		<view class="goods-list">
+			<view class="goods-item" >
+				<view class="goods-img">
+					<image src="{{imgurl}}{{goods.goodsPic}}"></image>
+				</view>
+				<view class="goods-item-right">
+					<view class="goods-item-right-top">
+						<view class="goods-name text2">{{goods.goodsName}}</view>
+						<view class="goods-specs">
+							<view class="goods-specs-class">{{item.goodsSkuInfo}}</view>
+							<!-- <view class="goods-specs-name">深蓝色;</view> -->
+						</view>
+					</view>
+					<view class="goods-item-right-bottom">
+						<view class="goods-price">¥{{goods.goodsPrice}}</view>
+						<view class="goods-num">×{{goods.goodsNum}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="situation">
+			<view  class="situation-itme" bindtap="OnSituation">
+				<view class="situation-itme-title">退款原因</view>
+				<view class="situation-itme-right">
+					<view class="situation-itme-right-title text1">请选择</view>
+					<view class="situation-itme-right-icol">></view>
+				</view>
+			</view>
+		</view>
+		<view class="refund-money">
+			<view class="money-top">
+				<view class="money-top-title">退款金额：</view>
+				<view class="money-price">￥{{goods.goodsPrice}}</view>
+			</view>
+			<view class="money-content">最多可退￥{{orderInfo.ordersTotalAmount}}(含运费￥{{orderInfo.ordersShippingFee}})</view>
+			<view class="money-msg">
+				<view class="money-msg-title">退款说明：</view>
+				<input type="text" placeholder="选填" bindinput="Oninput"/>
+			</view>
+		</view>
+		<view  class="situation-itme refund-way"  bindtap="OnRefund">
+			<view class="situation-itme-title">退货方式</view>
+			<view class="situation-itme-right">
+				<view class="situation-itme-right-title text1">请选择</view>
+				<view class="situation-itme-right-icol">></view>
+			</view>
+		</view>
+		<view class="receipts">
+			<view class="receipts-top">上传凭证</view>
+			<view class="receipts-imgs">
+			<!--加图片 -->
+				<view class="receipts-img-item" wx:for="{{files}}"><image class="" src="{{imgurl}}{{item}}"></image></view>
+			<!--  -->
+				<view class="receipts-img-item" bindtap="selectPhoto" wx:if="{{true}}">
+					<view class="receipts-img-item-img">
+						<image src="https://img.xmsmoo.com/upload/simu/20191028173920515401.png"></image>
+					</view>
+					<view class="receipts-img-item-bottom">
+						<view class="receipts-item-bottom-top">上传凭证</view>
+						<view class="receipts-item-bottom-bottom">（最多3张）</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="refund-btn-box">
+			<view class="refund-btn" bindtap="OnSubmit">提交</view>
+		</view>
+	</view>
+	<!--  -->
+	<view class="star-box" wx:if="{{situation}}">
+		<view class="screen" bindtap="OnSituation"></view>
+		<view class="star">
+			<view class="star-top">退款原因</view>
+			<view class="star-list">
+				<view class="star-item" wx:for="{{refundReason}}" wx:for-index="reasonIndex" bindtap="selectSituation" data-index="{{reasonIndex}}">
+					<view class="star-item-left text1" data-refund-reason="{{item.reason}}">{{item.reason}}</view>
+					<view class="star-item-right">
+						<image wx:if="{{situationNum==reasonIndex}}" src="https://img.xmsmoo.com/upload/4/20191024095159290771.png"></image>
+						<image wx:else src="https://img.xmsmoo.com/upload/4/20191024095212538146.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="star-btns">
+				<view class="star-btn" bindtap="OnSituation" data-star-id="{{}}">关闭</view>
+			</view>
+		</view>
+	</view>
+	<!--  -->
+	<!--  -->
+	<view class="star-box" wx:if="{{refundWay}}">
+		<view class="screen" bindtap="OnRefund"></view>
+		<view class="star">
+			<view class="star-top">退货方式</view>
+			<view class="star-list">
+				<view class="star-item" wx:for="{{RefundWays}}" wx:for-index="refundWayIndex" bindtap="selectRefundWay" data-index="{{refundWayIndex}}">
+					<view class="star-item-left text1" data-refund-ways="{{item.ways}}">{{item.ways}}</view>
+					<view class="star-item-right">
+						<image wx:if="{{refundWayNum==refundWayIndex}}" src="https://img.xmsmoo.com/upload/4/20191024095159290771.png"></image>
+						<image wx:else src="https://img.xmsmoo.com/upload/4/20191024095212538146.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="star-btns">
+				<view class="star-btn" bindtap="OnRefund" data-star-id="{{}}">关闭</view>
+			</view>
+		</view>
+	</view>
+	<!--  -->
+</view>

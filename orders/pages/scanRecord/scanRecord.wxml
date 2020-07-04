@@ -1,0 +1,14 @@
+<!--    浏览商品商品--->
+<view class="recom-list" wx:for="{{3}}">
+    <view class="scan-date">10月26日</view>
+    <view class="recom-goods-list" >
+        <view class="recom-goods-item"  wx:for="{{5}}" bindtap="onGoods" data-goods-id="{{1}}">
+        <view class="recom-goodsImg"><image src="https://img.xmsmoo.com/upload/simu/20191024140836348174.png"></image></view>
+        <view class="recom-goodsName text2">
+            北欧简约干花瓶摆件客厅插花简约装饰...
+            设手工陶瓷小花瓶
+        </view>
+        <view class="recom-goodsPrice">￥49.80</view>
+    </view>
+    </view>
+</view>

@@ -1,0 +1,130 @@
+<view class="wrap">
+	<view class="contents">
+		<!--  -->
+		<view class="goods-list" wx:if="{{false}}">
+			<view class="goods-item">
+				<view class="goods-img">
+					<image src="https://img.xmsmoo.com/upload/4/20191023151059503959.png"></image>
+				</view>
+				<view class="goods-item-right">
+					<view class="goods-item-right-top">
+						<view class="goods-name text2">时日朝歌时蜂鸣器时蜂鸣器歌时蜂鸣时蜂鸣器歌时蜂鸣时蜂鸣器歌时蜂鸣歌时蜂鸣歌时蜂鸣歌时蜂鸣歌时蜂鸣吕</view>
+						<view class="goods-specs">
+							<view class="goods-specs-class">颜色分类:</view>
+							<view class="goods-specs-name">深蓝色;</view>
+						</view>
+					</view>
+					<view class="goods-item-right-bottom">
+						<view class="goods-price">¥33</view>
+						<view class="goods-num">×1</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!--  -->
+		<block wx:if="{{true}}">
+			<view class="spell-msg">
+				<view class="spell-time">
+					<p>11:22:22</p>
+				</view>
+				<view class="spell-mens">
+					还差<spand>1</spand>人,赶快邀请好友来拼单吧
+				</view>
+				<view class="spell-btn0 spell-btn">邀请好友拼单</view>
+				<view class="spell-btn1 spell-btn">
+					去首页逛逛
+				</view>
+			</view>
+		</block>
+		<!--  -->
+	</view>
+	<view class="content">
+		<!--  -->
+		<view class="spell-content-box">
+			<view class="spell-content" wx:if="{{false}}">
+				<view class="men-imgs">
+					<view class="men-img men-main">
+						<image src="../images/goods.png"></image>
+					</view>
+					<view class="men-img men-last"></view>
+				</view>
+				<view class="spell-li">
+					<text>拼主所选规格:</text>
+					<text>渔夫岛优品</text>
+				</view>
+				<view class="spell-places">
+					<view>仅剩<spand>1</spand>个名额,</view>
+					<text>23:22:32后结束</text>
+				</view>
+				<view class="spell-btn-a spell-btn0 spell-btn">
+					<text>参与电路板的拼单</text>
+				</view>
+			</view>
+			<!--  -->
+			<view class="spell-content-else" wx:if="{{true}}">
+				<view class="men-imgs men-imgs-else">
+					<view class="men-img men-main">
+						<image src="../images/goods.png"></image>
+					</view>
+					<view class="men-img men-last">
+						<image src=""></image>
+					</view>
+				</view>
+			</view>
+			<!--  -->
+			<view class="order-titles spell-planing" wx:if="{{true}}">
+				<view class="order-title planing-title">订单详情</view>
+				<view class="order-text planing-msg">
+					<P class='text1'>井晶回家打开回家打开</P>
+					<view class="right-icol">></view>
+				</view>
+			</view>
+			<view class="spell-planing">
+				<view class="planing-title">
+					<p>拼单规则</p>
+				</view>
+				<view class="planing-msg">
+					<text>好友拼单 • 人满发货 • 人不满退货</text>
+				</view>
+			</view>
+		</view>
+		<!--  -->
+		<view class="goods-box">
+			<!-- 双个排版 -->
+			<view class="goods-box-top">为你推荐</view>
+			<view class="goods-lists">
+				<!--  -->
+				<view class="goods-item" wx:for="{{3}}" bindtap="onGoods" data-goods-id="{{1}}">
+					<view class="goods-img">
+						<image class="" src="https://img.xmsmoo.com/upload/4/20191023151059503959.png" mode="aspectFit|aspectFill|widthFix"
+						 lazy-load="false" binderror="" bindload=""></image>
+					</view>
+					<view class="goods-msg">
+						<view class="goods-name text1">房东商房价房东商房价房东商房价</view>
+						<view class="goods-offers">
+							<view class="goods-offers-msg text1">非高峰时段客户高峰时段客户都是</view>
+						</view>
+						<!-- <view wx:else class="goods-offers">
+              <view class="goods-offers-item">获得房东咯</view>
+               <view class="goods-offers-item">获得房东咯</view>
+            </view> -->
+						<view class="goods-prices">
+							<view class="goods-prices-left">
+								<view class="goods-price-now text1">
+									<P>¥</P>
+									<P>212</P>
+								</view>
+								<view class="goods-price-old">
+									¥322
+								</view>
+							</view>
+							<view class="goods-prices-right">...</view>
+						</view>
+					</view>
+				</view>
+
+				<!--  -->
+			</view>
+		</view>
+	</view>
+</view>

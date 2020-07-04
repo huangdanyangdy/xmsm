@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+  },
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff492e",
+    "navigationBarTitleText": "拼团商品",
+    "navigationBarTextStyle": "white"
+}

@@ -1,0 +1,224 @@
+<view class="wrap">
+<!--    搜索栏=======================================-->
+    <view class="nav-top">
+        <view class="top-left" bindtap="OnSweeping">
+            <view class="scanCoode">
+                <image src="https://img.xmsmoo.com/upload/simuIcon/20191021155716110581.png"></image>
+            </view>
+            <view class="scanCode-text">扫一扫</view>
+        </view>
+        <view class="top-search" bindtap="toSearch">
+            <view class="search-img">
+                <image src="https://img.xmsmoo.com/upload/simuIcon/20191021161047344580.png"></image>
+            </view>
+            <input type="text" placeholder="搜索店内商品" placeholderstyle="#777"/>
+        </view>
+        <view class="redBag"><image src="https://img.xmsmoo.com/upload/simuIcon/20191021161210103176.png"></image></view>
+        <view class="top-right">
+            <view class="news-img">
+                <image src="https://img.xmsmoo.com/upload/simuIcon/20191021161132099574.png"></image>
+            </view>
+            <view class="news-point"></view>
+        </view>
+    </view>
+<!--    分类栏====================================================-->
+    <view class="sort-boxs" >
+        <view class="sort-box" >
+            <view wx:for="{{10}}"  class="sort-items {{sortNum==index?'sort-items-active':'' }}"  data-flag="{{index}}" bindtap="chooseSort">精选</view>
+        </view>
+    </view>
+<!--    中间金刚区==================================================-->
+    <view class="index-middle">
+        <swiper class="mid-sort-img" autoplay="true">
+            <swiper-item wx:for="{{advList}}"  data-url="{{item.advXcxUrl}}" bindtap="toAdv">
+                <image src="{{imgurl}}{{item.advPic}}"></image>
+            </swiper-item>
+        </swiper>
+<!--        金刚区    -->
+        <view class="mid-sort-list">
+            <view class="mid-sort-item" wx:for="{{navigation}}" data-url="{{item.navigationXcxUrl}}" bindtap="toNavigation">
+                <view class="mid-sort-image"><image src="{{imgurl}}{{item.navigationPic}}"></image></view>
+                <view class="mid-sort-title">{{item.navigationName}}</view>
+            </view>
+        </view >
+    </view>
+<!--   爆款/特价/品牌特卖======================================-->
+<!--    <view class="window-box">-->
+<!--        <view class="window-banner" wx:for="{{subjectList0}}"><image src="{{imgurl}}{{item.subjectPic}}"></image></view>-->
+<!--        <view class="window-list-box">-->
+<!--            <view class="window-list-one">-->
+<!--                <view class="list-one-item" wx:for="{{subjectList1}}"><image src="{{imgurl}}{{item.subjectPic}}"></image></view>-->
+<!--            </view>-->
+<!--            <view class="window-list-two" >-->
+<!--                <view  class="list-two-item" wx:for="{{subjectList2}}"><image src="{{imgurl}}{{item.subjectPic}}"></image></view>-->
+<!--            </view>-->
+<!--        </view>-->
+<!--    </view>-->
+<!--&lt;!&ndash;今日热销榜/更多优惠=================仅限四个商品陈列============================&ndash;&gt;-->
+<!--    <view class="sale-more">-->
+<!--        <view class="sale-more-left">今日热销榜</view>-->
+<!--        <view class="sale-more-right">-->
+<!--            <view class="sale-more-text">更多优惠</view>-->
+<!--            <view  class="sale-more-icon"> > </view>-->
+<!--        </view>-->
+<!--    </view>-->
+
+
+<!--    今日热销榜/更多优惠==仅限四个商品陈列=======-->
+    <view class="window-banner" wx:for="{{subjectList0}}"  data-subject-id="{{item.subjectId}}" data-url="{{item.subjectXcxUrl}}" bindtap="tosubPage"><image src="{{imgurl}}{{item.subjectPic}}"></image></view>
+    <view class="hotSale-Wrap">
+        <view class="hot-sale-box">
+            <view class="hot-sale-items" wx:for="{{subjectList1}}"  data-url="{{item.subjectXcxUrl}}" bindtap="tosubPage"  data-subject-id="{{item.subjectId}}"><image src="{{imgurl}}{{item.subjectPic}}"></image></view>
+<!--            <view class="hot-sale-items"><image src="https://img.xmsmoo.com/upload/simu/20191022170028925715.png"></image></view>-->
+<!--            <view class="hot-sale-items"><image src="https://img.xmsmoo.com/upload/simu/20191022170028925715.png"></image></view>-->
+<!--            <view class="hot-sale-items"><image src="https://img.xmsmoo.com/upload/simu/20191022170028925715.png"></image></view>-->
+        </view>
+        <!--        广播     -->
+        <view class="report-box">
+            <view class="report-text"><image src="https://img.xmsmoo.com/upload/simuIcon/20191022094731090083.png"></image></view>
+            <view class="report-divide">|</view>
+            <view class="report-image"><image src="https://img.xmsmoo.com/upload/simuIcon/20191022094251925828.png"></image></view>
+            <view class="report-swiper">
+                <swiper autoplay="true" vertical="true">
+                    <swiper-item class="report-content"  wx:for="{{content}}">{{item.noticeTitle}}</swiper-item>
+                </swiper>
+            </view>
+        </view>
+    </view>
+
+
+<!--    限时折扣===========-->
+<!--    <view class="limit-discount-wrap">-->
+<!--        <view class="limit-discount">-->
+<!--            <view class="limit-discount-time">-->
+<!--                <view class="limit-discount-title">限时折扣</view>-->
+<!--                <view class="limit-time-box">{{houTime}}</view>-->
+<!--                <view class="limit-time-point">:</view>-->
+<!--                <view class="limit-time-box">{{minTime}}</view>-->
+<!--                <view class="limit-time-point">:</view>-->
+<!--                <view class="limit-time-box">{{secTime}}</view>-->
+<!--            </view>-->
+<!--            <view class="sale-more-right">-->
+<!--                <text>查看更多</text>-->
+<!--                <view  class="sale-more-icon"> > </view>-->
+<!--            </view>-->
+<!--        </view>-->
+<!--        &lt;!&ndash;&#45;&#45;限时折扣-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;折扣商品-&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--        <view class="discount-goods-list">-->
+<!--            <view class="discount-goods-item" wx:for="{{seckill}}">-->
+<!--                <view class="discount-goods-image"><image src="{{imgurl}}{{item.seckillGoodsPic}}"></image>-->
+<!--&lt;!&ndash;                    <view class="discount-goods-discount">8.0折</view>&ndash;&gt;-->
+<!--                </view>-->
+
+<!--                <view class="discount-goods-name text1">{{item.seckillGoodsName}}</view>-->
+<!--                <view class="discount-goods-price">-->
+<!--                    <view class="discount-price-now text1">-->
+<!--                        <view class="price-icon">￥</view>-->
+<!--                        <view class="text1">{{item.seckillGoodsPrice}}</view>-->
+<!--                    </view>-->
+<!--                    <view class="discount-price-origin text1">￥{{item.seckillGoodsOriginalPrice}}</view>-->
+<!--                </view>-->
+<!--            </view>-->
+<!--        </view>-->
+<!--    </view>-->
+<!--    楼层================-->
+    <view class="floor-wrap" wx:for="{{floordata}}">
+        <view class="floor-banner"><image src="{{imgurl}}{{item.floor.floorPic}}"></image></view>
+        <view class="floorGoods-list">
+            <view class="goods-item" wx:for="{{item.goodsList}}"  wx:for-item="goods" bindtap="toGoodsDetaile" data-goods-id="{{goods.goodsId}}">
+                <view class="goods-img">
+                    <image src="{{imgurl}}{{goods.goodsPic}}"></image>
+                </view>
+                <view class="goods-msg">
+                    <view class="goods-name text1">{{goods.goodsName}}</view>
+                    <view class="goods-offers">
+<!--                        <view class="goods-offers-list">-->
+<!--                            <view class="goods-offers-item">获得房东咯</view>-->
+<!--                            <view class="goods-offers-item">获得房东咯</view>-->
+<!--                        </view>-->
+                        <view class="goods-subTit text1">{{goods.goodsPromotions}}</view>
+                    </view>
+                    <view class="goods-prices">
+                        <view class="goods-prices-left">
+                            <view class="goods-price-now text1">
+                                <P>¥</P>
+                                <P>{{goods.goodsPrice}}</P>
+                            </view>
+                            <view class="goods-price-old">
+                                ¥{{goods.goodsOriginalPrice}}
+                            </view>
+                        </view>
+                        <view class="goods-prices-right">
+                            ....
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+<!--橱窗购买方式分类============-->
+    <scroll-view class="sale-sort-scroll-box"
+     scroll-x="true" 
+     scroll-into-view="ele{{saleSort}}"
+   scroll-left="{{scrollLeft}}"
+     bindscroll="scrollMove" 
+    style="width: 100%"
+       >
+    <view class="sale-sort-box-wrap" >
+        <view class="sale-sort-box" id="ele{{index}}" wx:for="{{showcase}}"  data-index="{{index}}" bindtap="changeSort">
+            <view class="sale-sort-title {{saleSort==index? 'sale-sort-title-active':''}}">{{item.showcaseName}}</view>
+            <view class="sale-sort-reason {{saleSort==index? 'sale-sort-reason-active':''}}">{{item.showcaseSubName}}</view>
+        </view>
+    </view>
+    </scroll-view>
+    
+<!--    分类商品===========-->
+    <view class="goods-list" wx:if="{{saleSort==showcaseIndex}}"  wx:for="{{showcase}}" wx:for-item="items" wx:for-index="showcaseIndex">
+        <!--  -->
+        <view class="goods-item"  wx:for="{{items.goodsList}}" wx:for-item="goodslist"  bindtap="toGoodsDetaile" data-goods-id="{{goodslist.goodsId}}">
+            <view class="goods-img">
+                <image class="" src="{{imgurl}}{{goodslist.goodsPic}}" ></image>
+            </view>
+            <view class="goods-msg">
+                <view class="goods-name text1">{{goodslist.goodsName}}</view>
+                <view class="goods-offers">
+<!--                    <view class="goods-offers-item">获得房东咯</view>-->
+<!--                    <view class="goods-offers-item">获得房东咯</view>-->
+                    <view class="goods-subTit text1">{{goodslist.goodsPromotions}}</view>
+                </view>
+                <view class="goods-prices">
+                    <view class="goods-prices-left">
+                        <view class="goods-price-now text1">
+                            <P>¥</P>
+                            <P>{{goodslist.goodsPrice}}</P>
+                        </view>
+                        <view class="goods-price-old">
+                            ¥{{goodslist.goodsOriginalPrice}}
+                        </view>
+                    </view>
+                    <view class="goods-prices-right">
+                        ....
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <!--  -->
+    </view>
+<!--    /*首页弹窗========*/-->
+    <view class="mask-wrap" wx:if="{{Window&&couponStatus}}">
+        <view class="coupon-mask"></view>
+        <view class="coupon-toast" bindtap="Onwindows" 
+        data-url="{{Window.suspensionWindowUrl}}" 
+          style="background: url({{imgurl}}{{Window.suspensionWindowPic}});background-size:100%;" >
+            <view class="coupon-txt">{{Window.suspensionWindowTitle}}</view>
+            <view class="couponBtn" ></view>
+        </view>
+           <view class="cancle-coupon" bindtap="couponCancle"><image src="https://img.xmsmoo.com/upload/simuIcon/20191101154849867339.png"></image></view>
+
+
+    </view>
+
+</view>
+
+<tabbar></tabbar>

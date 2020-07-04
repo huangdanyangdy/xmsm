@@ -1,0 +1,69 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/subject-detail/subject-detail",
+        "pages/goods-list/goods-list",
+        "pages/mine/mine",
+        "pages/cart/cart",
+        "pages/goods-class/goods-class",
+        "pages/search/search",
+        "pages/logs/logs",
+        "pages/login/login"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "subpackages": [{
+            "root": "orders",
+            "pages": [
+                "pages/refund-goodsList/refund-goodsList",
+                "pages/address-list/address-list",
+                "pages/service/service",
+                "pages/refund-recording/refund-recording",
+                "pages/refund-logistics/refund-logistics",
+                "pages/refund-customer/refund-customer",
+                "pages/refund-msg/refund-msg",
+                "pages/refund-list/refund-list",
+                "pages/refund-goods/refund-goods",
+                "pages/refund-money/refund-money",
+                "pages/scanRecord/scanRecord",
+                "pages/fill-eval/fill-eval",
+                "pages/myOrders/myOrders",
+                "pages/goodsDetail/goodsDetail",
+                "pages/pay-result/pay-result",
+                "pages/orders-detail/orders-detail",
+                "pages/address-edit/address-edit",
+                "pages/orders-sure/orders-sure",
+                "pages/evalDetail/evalDetail"
+            ]
+        },
+        {
+            "root": "member",
+            "pages": [
+                "pages/member-coupon/member-coupon",
+                "pages/member-collect/member-collect",
+                "pages/member-points/member-points",
+                "pages/member/member",
+                "pages/member-register/member-register"
+
+            ]
+        },
+        {
+            "root": "marketing",
+            "pages": [
+                "pages/teamOrder-suc-msg/teamOrder-suc-msg",
+
+                "pages/team-state/team-state",
+
+                "pages/team-goods/team-goods",
+                "pages/tuan-goods-detail/tuan-goods-detail",
+                "pages/seckill-goods-detail/seckill-goods-detail",
+                "pages/seckill/seckill"
+            ]
+        }
+    ]
+}

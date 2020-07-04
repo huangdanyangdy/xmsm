@@ -1,0 +1,131 @@
+<view class="mine-container">
+<!--    顶部会员信息=========-->
+    <view class="mine-top">
+        <view class="nav-top">
+            <view class="nav-topLeft">
+                <view class="nav-memberImg"><image src="{{member.memberHeadimgurl}}"></image></view>
+                <view class="nav-infoBox">
+                    <view class="nav-memName">
+                        <view class="nav-vipName text1">{{member.memberNickname}}</view>
+                        <view class="nav-VipImg" wx:if="{{member.memberState}}"><image src="https://img.xmsmoo.com/upload/simuIcon/20191026142119053094.png"></image></view>
+                    </view>
+                    <view class="nav-vipId text1">{{member.memberXcxOpenid}}</view>
+                </view>
+            </view>
+            <view class="nav-topRight">
+                <view class="top-rightImg"><image src="https://img.xmsmoo.com/upload/simuIcon/20191026144535318113.png"></image></view>
+                <navigator url="/member/pages/member/member" hover-class="none" class="member-central">会员中心</navigator>
+            </view>
+        </view>
+        <view class="nav-bottom">
+            <view class="nav-items" bindtap="toCollect">
+                <view class="itemsNum">{{favoritesNum}}</view>
+                <view class="items-name">收藏夹</view>
+            </view>
+            <view class="nav-items" bindtap="toMemberCouppon">
+                <view class="itemsNum">{{couponsNum}}</view>
+                <view class="items-name">优惠券</view>
+            </view>
+            <view class="nav-items">
+                <view class="itemsNum">{{member.memberMoney}}</view>
+                <view class="items-name">钱包</view>
+            </view>
+            <navigator hover-class="none" url="/orders/pages/scanRecord/scanRecord" class="nav-items">
+                <view class="itemsNum">123</view>
+                <view class="items-name">浏览记录</view>
+            </navigator>
+        </view>
+    </view>
+<!--    我的订单信息-->
+    <view class="mine-orderInfo">
+        <view class="orderInfo-top"  bindtap="toAllOrder">
+            <view class="orderTxt">我的订单</view>
+            <view class="order-right">
+                <view class="order-rightTxt">查看全部</view>
+                <view class="order-rightIcon"> > </view>
+            </view>
+        </view>
+        <view class="orderInfo-bottom" >
+            <view class="orderInfo-items" wx:for="{{myOrder}}" bindtap="toOrderStatus" data-index="{{index}}">
+                <view class="orderInfo-icon"><image src="{{item.imgSrc}}"></image></view>
+                <view class="orderInfo-status">{{item.status}}</view>
+            </view>
+            <navigator hover-class="none" url="/orders/pages/refund-list/refund-list" class="orderInfo-items">
+                <view class="orderInfo-icon"><image src="https://img.xmsmoo.com/upload/simuIcon/20191026175742707986.png"></image></view>
+                <view class="orderInfo-status">退款/售后</view>
+            </navigator>
+        </view>
+    </view>
+<!--    工具与服务===========-->
+    <view class="mine-middle">
+        <view class="orderInfo-top">
+            <view class="orderTxt">工具与服务</view>
+            <view class="order-right">
+                <view class="order-rightTxt">查看全部</view>
+                <view class="order-rightIcon"> > </view>
+            </view>
+        </view>
+        <view class="service-list">
+            <view class="service-items" wx:for="{{tools}}">
+                <view class="serviceImg"><image src="{{item.toolsImg}}"></image></view>
+                <view class="serviceTxt">{{item.toolsName}}</view>
+            </view>
+        </view>
+    </view>
+<!--    为你推荐===============-->
+    <view>
+        <view class="pic-Det">
+            <view class="pic-line"></view>
+            <view class="pic-tit">为你推荐</view>
+            <view class="pic-line"></view>
+        </view>
+        <!-- 双个排版 -->
+        <view class="goods-list" >
+            <!--  -->
+            <view class="goods-item"wx:for="{{goodsRecommend}}" wx:for-item="item"
+                  data-goods-id="{{item.goods.goodsId}}" bindtap="onGoods" >
+                <view class="goods-img">
+                    <image class="" src="{{imgurl}}{{item.goods.goodsPic}}" ></image>
+                </view>
+                <view class="goods-msg">
+                    <view class="goods-name text1">{{item.goods.goodsName}}</view>
+                    <view wx:if="{{true}}" class="goods-offers">
+                        <view class="goods-offers-msg text1">{{item.goods.goodsPromotions}}</view>
+                    </view>
+                    <view wx:else class="goods-offers">
+                        <view class="goods-offers-item">获得房东咯</view>
+                        <view class="goods-offers-item">获得房东咯</view>
+                    </view>
+                    <view class="goods-prices">
+                        <view class="goods-prices-left">
+                            <view class="goods-price-now text1">
+                                <P>¥</P>
+                                <P>{{item.goods.goodsPrice}}</P>
+                            </view>
+                            <view class="goods-price-old">
+                                ¥{{item.goods.goodsOriginalPrice}}
+                            </view>
+                        </view>
+                        <view class="goods-prices-right">...</view>
+                    </view>
+                </view>
+            </view>
+
+            <!--  -->
+        </view>
+    </view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+<tabbar ></tabbar>

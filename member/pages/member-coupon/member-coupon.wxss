@@ -1,0 +1,113 @@
+/* member/pages/member-coupon/member-coupon.wxss */
+/*page{*/
+/*    background:rgba(238,238,238,1);*/
+/*}*/
+/*导航栏*/
+.coupon-navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:750rpx;
+    height: 110rpx;
+    background: #FFF;
+    position:fixed;
+    border-bottom: 1rpx solid #ddd;
+    top:0;
+    z-index: 1;
+}
+.nav-use{
+    width: 94rpx;
+    height: 100%;
+    font-size:28rpx;
+    color:#999999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-use-active{
+    color:#333333;
+    border-bottom:1rpx solid #ff492e;
+}
+/*优惠券*/
+.coupon-box{
+   margin-top: 150rpx;
+}
+.couponUse {
+    width: 710rpx;
+    height: 180rpx;
+    background: url("https://img.xmsmoo.com/upload/simuIcon/20191024164737306266.png");
+    background-size: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FF443A;
+    box-sizing: border-box;
+      margin:0 auto;
+    margin-bottom: 30rpx;
+}
+
+.couponUsed {
+    width: 710rpx;
+    height: 180rpx;
+    background: url("https://img.xmsmoo.com/upload/simuIcon/20191108115058395233.png");
+    background-size: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FF443A;
+    box-sizing: border-box;
+    margin:0 auto;
+    margin-bottom: 30rpx;
+}
+.couponPass {
+    width: 710rpx;
+    height: 180rpx;
+    background: url("https://img.xmsmoo.com/upload/simuIcon/20191108095302362995.png");
+    background-size: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FF443A;
+    box-sizing: border-box;
+      margin:0 auto;
+    margin-bottom: 30rpx;
+}
+
+.couponUse-left {
+    padding-top: 20rpx;
+    padding-left: 40rpx;
+}
+
+.couponUse-leftTop {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    line-height: 1;
+    margin-bottom: 20rpx;
+}
+
+.couponUse-icon {
+    font-size: 36rpx;
+    margin-right: 5rpx;
+}
+
+.couponUse-worth {
+    font-size: 50rpx;
+    margin-right: 10rpx;
+}
+
+.couponUse-txt {
+    font-size: 28rpx;
+}
+
+.couponUse-for {
+    font-size: 24rpx;
+    margin-bottom: 20rpx;
+}
+
+.couponUse-right {
+    padding-right: 65rpx;
+}

@@ -1,0 +1,23 @@
+<view class="payWrap">
+    <view class="paySuccessCotain">
+        <view class="paySucIcon"><icon type="success" size="120rpx" color="#FF443A"></icon></view>
+        <view class="paySucInfo">订单支付成功</view>
+        <view class="payTotal">￥{{orderDetail.ordersActuallyAmount}}</view>
+    </view>
+    <view class="payWay">
+        <view>支付方式</view>
+        <view>微信支付</view>
+    </view>
+</view>
+
+
+
+<view class="paySuccessBottom">
+    <view class="seeOrder seeOrder-active" bindtap="toOrderDetail">查看订单</view>
+    <view class="seeOrder" bindtap="toIndex">继续购物</view>
+    <view class="seeOrder" bindtap="toMyOrder">返回订单</view>
+</view>
+<view class="payCoupon" bindtap="getPayCoupon" wx:if="{{payPromotion}}">
+     <!-- <image src="https://img.xmsmoo.com/upload/5/20191017103829057233.png"></image> -->
+   <image src="{{imgUrl}}{{payPromotion.payPromotionPic}}" ></image>
+</view>

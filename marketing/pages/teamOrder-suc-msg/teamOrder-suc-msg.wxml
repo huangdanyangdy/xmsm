@@ -1,0 +1,166 @@
+<view class="wrap">
+    <view class="top">
+        <!--  -->
+        <view class="top-order" wx:if="{{state==10}}">
+            <view class="top-order-top">
+                <view class="top-order-top-img">
+                    <image src="https://img.xmsmoo.com/upload/4/20191024153001848851.png"></image>
+                </view>
+                <view class="top-order-top-title">待分享</view>
+            </view>
+            <view class="top-order-time">还差一人拼单成功</view>
+        </view>
+        <!--  -->
+        <view class="top-order" wx:if="{{state==20}}">
+            <view class="top-order-top">
+                <view class="top-order-top-img">
+                    <image src="https://img.xmsmoo.com/upload/4/20191024153001848851.png"></image>
+                </view>
+                <view class="top-order-top-title">拼单成功</view>
+            </view>
+            <view class="top-order-time">等待卖家发货</view>
+        </view>
+        <!--  -->
+        <view class="top-bottom" >
+            <view class="top-bottom-wrap" wx:if="{{state==20}}">
+                <view  class="top-bottom-top">
+                    <view class="top-bottom-top-item {{state==20||state==30||state==40||state==50?'top-bottom-top-item-acitve':''}}">买家付款</view>
+                    <view class="top-bottom-top-item {{state==30||state==40||state==50?'top-bottom-top-item-acitve':''}}">拼单成功</view>
+                    <view class="top-bottom-top-item {{state==40||state==50?'top-bottom-top-item-acitve':''}}">商家发货</view>
+                    <view class="top-bottom-top-item {{state==50?'top-bottom-top-item-acitve':''}}">交易完成</view>
+                </view>
+                <view  class="top-bottom-centent">
+                    <view class="dog-item {{state==20||state==30||state==40||state==50?'dog-item-acitve':''}}"></view>
+                    <view class="dog-item {{state==30||state==40||state==50?'dog-item-acitve':''}}"></view>
+                    <view class="dog-item {{state==40||state==50?'dog-item-acitve':''}}"></view>
+                    <view class="dog-item dog-item3 {{state==50?'dog-item-acitve':''}}"></view>
+                </view>
+            </view>
+
+            <view class="address" bindtap="onAddress">
+                <view class="address-msg">
+                    <view class="address-img">
+                        <image src=""></image>
+                    </view>
+                    <view class="address-right">
+                        <view class="address-right-top">
+                            <view class="address-name text1">控制块</view>
+                            <view class="address-phone">17377373773</view>
+                        </view>
+                        <view class="address-content text1">还是多看看然后看回会返回会返回家的时间就会返回的数据集合</view>
+                    </view>
+                </view>
+                <!-- <view class="right-icon">></view> -->
+            </view>
+        </view>
+    </view>
+    <view class="contents">
+        <view class="goods">
+            <view class="goods-top">
+                <view class="goods-title">商品详情</view>
+            </view>
+            <view class="goods-list">
+                <view class="goods-item" wx:for="{{3}}">
+                    <view class="goods-img">
+                        <image src="https://img.xmsmoo.com/upload/4/20191023151059503959.png"></image>
+                    </view>
+                    <view class="goods-item-right">
+                        <view class="goods-item-right-top">
+                            <view class="goods-name text2">时日朝歌时蜂鸣器时蜂鸣器歌时蜂鸣时蜂鸣器歌时蜂鸣时蜂鸣器歌时蜂鸣歌时蜂鸣歌时蜂鸣歌时蜂鸣歌时蜂鸣吕</view>
+                            <view class="goods-specs">
+                                <view class="goods-specs-class">颜色分类:</view>
+                                <view class="goods-specs-name">深蓝色;</view>
+                            </view>
+                        </view>
+                        <view class="goods-item-right-bottom">
+                            <view class="goods-price">¥33</view>
+                            <view class="goods-num">×1</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <!--  -->
+            <view class="goods-msg">
+                <view class="goods-msg-top">费用明细</view>
+                <!--  -->
+                <view class="goods-msg-item">
+                    <view class="goods-msg-item-left">商品金额</view>
+                    <view class="goods-msg-item-right">¥ 33</view>
+                </view>
+                <view class="goods-msg-item">
+                    <view class="goods-msg-item-left">优惠券</view>
+                    <view class="goods-msg-item-right">- ¥ 33</view>
+                </view>
+                <view class="goods-msg-item">
+                    <view class="goods-msg-item-left">运费</view>
+                    <view class="goods-msg-item-right">包邮</view>
+                </view>
+                <!--  -->
+                <view class="goods-msg-bottom">
+                    <view class="goods-msg-bottom-right">
+                        <view class="msg-bottom-right-title">实付款:</view>
+                        <view class="msg-goods-prices">¥ 33</view>
+                    </view>
+                </view>
+            </view>
+            <!--  -->
+        </view>
+        <view class="team-saling">
+            <view  class="team-left">拼单进行中</view>
+            <view class="team-right">
+                <view class="team-img"><image src="https://img.xmsmoo.com/upload/simu/20191028163745581582.png"></image></view>
+                <view class="team-img" wx:if="{{state==10}}"><image src="https://img.xmsmoo.com/upload/simuIcon/20191101114820605929.png"></image> </view>
+                <view class="team-img" wx:if="{{state==20}}"><image src="https://img.xmsmoo.com/upload/simu/20191028163745581582.png"></image> </view>
+                <view class="see-more-icon"> > </view>
+            </view>
+        </view>
+        <view class="order goods">
+            <view class="order-top goods-top">订单信息</view>
+            <view class="order-msg-item">
+                <view class="order-msg-item-left">订单备注:</view>
+                <view class="order-msg-item-right text1">百里旱亓</view>
+            </view>
+            <view class="order-msg-item">
+                <view class="order-msg-item-left">订单编号:</view>
+                <view class="order-msg-item-right text1">百里旱亓</view>
+            </view>
+            <view class="order-msg-item">
+                <view class="order-msg-item-left">创建时间:</view>
+                <view class="order-msg-item-right text1">百里旱亓</view>
+            </view>
+        </view>
+    </view>
+    <view class="footer">
+        <view class="btn-box" wx:if="{{state==10}}">
+            <view class="btn-item">联系商家</view>
+            <view class="btn-item" bindtap="onCancelOrder">取消订单</view>
+            <view class="btn-item">邀请好友拼单</view>
+        </view>
+        <view class="btn-box" wx:if="{{state==20}}">
+            <view class="btn-item">联系商家</view>
+            <view class="btn-item">取消订单</view>
+            <view class="btn-item">再来一单</view>
+        </view>
+    </view>
+    <!--  -->
+    <view class="conpons-box" wx:if="{{CancelOrder}}">
+        <view class="screen" bindtap="onCancelOrder"></view>
+        <view class="conpons">
+            <view class="conpons-top">取消订单</view>
+            <view class="conpons-list">
+                <view class="conpons-item" wx:for="{{10}}" wx:for-index="conponsIndex" bindtap="selectConpons" data-index="{{conponsIndex}}">
+                    <view class="conpons-item-left text1">我不想买了</view>
+                    <view class="conpons-item-right">
+                        <image wx:if="{{conponsNum==conponsIndex}}" src="https://img.xmsmoo.com/upload/4/20191024095159290771.png"></image>
+                        <image wx:else src="https://img.xmsmoo.com/upload/4/20191024095212538146.png"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="conpons-btns">
+                <view class="conpons-btn conpons-btn-left" bindtap="onCancelOrder" data-conpons-id="{{}}">暂不取消</view>
+                <view class="conpons-btn " bindtap="onConpons" data-conpons-id="{{}}">确认取消</view>
+            </view>
+        </view>
+    </view>
+    <!--  -->
+</view>
